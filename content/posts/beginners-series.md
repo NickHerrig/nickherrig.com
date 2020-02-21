@@ -2,7 +2,7 @@
 date = "2020-02-20"
 title = "The Beginners Series"
 description = "This post introduces the beginners series for learning about technology."
-tags = [ "", ]
+draft = true
 categories=["beginner",]
 +++
 
