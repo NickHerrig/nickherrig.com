@@ -1,9 +1,10 @@
 +++
-date = "2017-01-08"
+date = "2020-02-20"
 title = "Theme Demo"
 description = "The post demonstrates features of the coder theme."
-images = ["/images/N90.jpg"]
 math = true
+tags = [ "go", "golang", "templates", "themes", "development", ]
+categories=["Development", "golang",]
 series = ["Theme", "Hugo"]
 +++
 
@@ -74,4 +75,3 @@ var foo = function (bar) {
 
 console.log(foo(5));
 ```
-
