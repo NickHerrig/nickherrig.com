@@ -1,8 +1,7 @@
 +++
-date = "2020-02-20"
+date = "2020-05-20"
 title = "The Beginners Series"
 description = "This post introduces the beginners series for learning about technology."
-draft = true
 categories=["beginner",]
 +++
 
