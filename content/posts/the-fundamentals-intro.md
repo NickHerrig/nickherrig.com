@@ -33,13 +33,13 @@ I thought about his situation for the next few weeks and tried to answer the que
 The fundamentals blog series is my answer to the above two questions.
 It's my attempt to answer the high school band teachers questions about making the shift from non technical work to technical work.
 The fundamentals is a blog series about computer and technology concepts explained in a digestible and non convoluted format.
-The blog series is meant to be approachable, humble, non assuming.
+The blog series is meant to be approachable, humble, and non assuming.
 We will cover a variety of software engineering and computer science concepts, have a chat about them, and test our understanding together with examples.
 
 ## Audience
 I'm writing this blog series for a few different people I've met over the years.
 
- - The high school band teacher looking to make a career shift.
+- The high school band teacher looking to make a career shift.
 - The 4 year college graduate, wanting a refresher on the fundamentals.
 - The person who thinks computers are too complicated to learn about.
 
@@ -49,17 +49,17 @@ Technology and software engineering **should not** be seen as intimidating.
 They should be viewed as an exciting tool set in which you can build a new future!
 you betcha,  it takes practice, but think of all the cool stuff we get to build together to make the world a better place!
 
-## Goal of Series
+## The Goals of Series
 I have two major goals for the fundamentals blog series.
-If i'm not accomplishing them in your opinion, please reach out and ask questions or suggest blog topics! 
 
 ### Motivate non-traditional developers to break into the technology industry
 You may have heard via social media, in the news, or from your grandma that many companies including [Google and Apple have ditched the college degree requirements](https://www.cnbc.com/2018/08/16/15-companies-that-no-longer-require-employees-to-have-a-college-degree.html?__source=facebook%7Cmain).
 This is pretty freaking exciting if you ask me...
-This means don't have to get into crazy student loan [debt](https://www.fool.com/student-loans/student-loan-debt-statistics/) to have a really awesome career in tech.
+This means you don't have to get into crazy student loan [debt](https://www.fool.com/student-loans/student-loan-debt-statistics/) to have a really awesome career in tech.
 Demand is high, and it's your brain they are demanding!
-Read a few programming books, this blog series, and take a coding boot camp and you will be well on your way to working in the industry! 
-My plea to you is that you are passionate and devote yourself to learning and the process. 
+Read a few programming books, this blog series(shameless plug), and take a coding boot camp.
+You'll be well on your way to working in the industry! 
+My plea to you is that you are passionate and devote yourself to learning and the process of learning. 
 Use this blog as one of your many resources! 
 
 ### Have a conversation about technology concepts in a non-intimidating fashion
@@ -67,15 +67,16 @@ Use this blog as one of your many resources!
 The blog series was designed to be a conversation between two people about bite sized computer science topics.
 Imagine that we are grabbing coffee, and while we are slamming that iced americano, or cappuccino we discussed bit shifting and why it's important. 
 I also want to have conversations about why things turned out the way they are Today, commonly known as **history**.
-While looking at history i'd like you to question the way the world works Today, and think how it could be better.
+While looking at history i'd like you to question the way the world works Today, and think how it could be better Tomorrow.
 The goal is for the series to be a learning path and to break down the barriers for other folks to join the party. 
 Any yes, it is a freaking party. 
 Let's Party! 
 
 ## What to Expect
 Before you join me on this journey, lets chat expectations.
+
 #### Each blog will be no more than 30 minutes.
-We are all busy, I get it... so i'll be keeping the concepts contained.
+We are all busy, I get it... so i'll keep the concepts contained.
 The content will be  short, sweet, and concise. 
 Expect to need around 30 minutes to read the blog post and test your understanding. 
 
