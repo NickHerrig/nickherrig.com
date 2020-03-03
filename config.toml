@@ -20,7 +20,7 @@ pygmentscodefencesguesssyntax = true
     description = "Nick Herrig's personal website"
     keywords = "blog,developer,personal"
     info = "Software Engineer and Builder"
-    avatarurl = "images/avatar.jpg"
+    avatarurl = "images/nick.jpg"
 #    footercontent = ""
 
     dateformat = "January 2, 2006"
