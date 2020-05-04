@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>introduction on nickherrig</title>
+    <link>https://nickherrig.com/categories/introduction/</link>
+    <description>Recent content in introduction on nickherrig</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 24 Feb 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://nickherrig.com/categories/introduction/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Fundamentals: Introduction</title>
+      <link>https://nickherrig.com/posts/the-fundamentals-intro/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nickherrig.com/posts/the-fundamentals-intro/</guid>
+      <description>A few weeks ago a friends partner reached out wanting some advice on learning to program and getting a job in the technology industry.
+ &amp;ldquo;I&amp;rsquo;m currently a high school teacher (band director) and am looking to make the change to web development in the next year.&amp;rdquo;
+ He was really excited about starting his career shift from a band director at the local high school to a hacker and software engineer.</description>
+    </item>
+    
+  </channel>
+</rss>
