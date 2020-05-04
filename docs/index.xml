@@ -6,21 +6,10 @@
     <description>Recent content on nickherrig</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 24 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://nickherrig.com/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>The Fundamentals: Give a Damn about Binary</title>
-      <link>https://nickherrig.com/posts/binary/</link>
-      <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://nickherrig.com/posts/binary/</guid>
-      <description>Welcome Back Ladies and Gents! Welcome back to The Fundamentals blog series. Where we have a conversation about technology concepts in a non-intimidating fashion. The ultimate goal? To lower the barrier to entry to the technology industry, and inspire technology craftspeople of the future.
-If you haven&amp;rsquo;t read the the fundamentals introduction post, feel free to give it a skim
-Before Reading Today we will be using Python as our programming language of choice to work through examples and help us learn!</description>
-    </item>
     
     <item>
       <title>The Fundamentals: Introduction</title>
