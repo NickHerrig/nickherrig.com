@@ -1,5 +1,6 @@
 baseurl = "https://nickherrig.com"
 title = "nickherrig"
+publishDir = "docs"
 
 theme = "hugo-coder"
 

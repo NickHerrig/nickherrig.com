@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Nick Herrig">
+    <meta name="description" content="Nick Herrig&#39;s personal website">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The Fundamentals: Give a Damn about Binary"/>
+<meta name="twitter:description" content="This post introduces the concepts of bits, bytes, and binary."/>
+
+    <meta property="og:title" content="The Fundamentals: Give a Damn about Binary" />
+<meta property="og:description" content="This post introduces the concepts of bits, bytes, and binary." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nickherrig.com/posts/binary/" />
+<meta property="article:published_time" content="2020-03-24T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-24T00:00:00+00:00" />
+
+
+    
+      <base href="https://nickherrig.com/posts/binary/">
+    
+    <title>
+  The Fundamentals: Give a Damn about Binary · nickherrig
+</title>
+
+    
+      <link rel="canonical" href="https://nickherrig.com/posts/binary/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://nickherrig.com/css/coder.min.a4f332213a21ce8eb521670c614470c58923aaaf385e2a73982c31dd7642decb.css" integrity="sha256-pPMyITohzo61IWcMYURwxYkjqq84XipzmCwx3XZC3ss=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="https://nickherrig.com/css/coder-dark.min.83a2010dac9f59f943b3004cd6c4f230507ad036da635d3621401d42ec4e2835.css" integrity="sha256-g6IBDayfWflDswBM1sTyMFB60DbaY102IUAdQuxOKDU=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://nickherrig.com/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://nickherrig.com/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.69.2" />
+  </head>
+
+  
+  
+    
+  
+  <body class="colorscheme-dark">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://nickherrig.com/">
+      nickherrig
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://nickherrig.com/quotes/">Quotes</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://nickherrig.com/posts/">Blog</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">The Fundamentals: Give a Damn about Binary</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2020-03-24T00:00:00Z'>
+                March 24, 2020
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              1-minute read
+            </span>
+          </div>
+          <div class="categories">
+  <i class="fas fa-folder"></i>
+    <a href="https://nickherrig.com/categories/fundamentals/">fundamentals</a></div>
+
+          
+        </div>
+      </header>
+
+      <div>
+        
+        <h2 id="welcome-back-ladies-and-gents">Welcome Back Ladies and Gents!</h2>
+<p>Welcome back to The Fundamentals blog series.
+Where we have a conversation about technology concepts in a non-intimidating
+fashion.
+The ultimate goal?
+To lower the barrier to entry to the technology industry, and inspire
+technology
+craftspeople of the future.</p>
+<p>If you haven&rsquo;t read the the fundamentals introduction post, feel free to <a href="https://nickherrig.com/posts/the-fundamentals-intro/">give
+it a skim</a></p>
+<h3 id="before-reading">Before Reading</h3>
+<p>Today we will be using
+<a href="https://en.wikipedia.org/wiki/Python_%28programming_language%29">Python</a> as
+our programming language of choice to work through examples and help us learn!
+If you do not have python installed, follow the <a href="https://www.python.org/downloads/">official Python
+docs</a> to install python on your particular
+operating system!</p>
+<h2 id="todays-topic">Todays Topic!</h2>
+<p>Today we will chat about binary and why you should give a damn about these
+topics.</p>
+<h1 id="count-to-ten">Count to Ten</h1>
+<p>If I asked you to count to ten, you&rsquo;d probably rattle off 1, 2, 3&hellip;</p>
+<h1 id="bits">Bits</h1>
+<h1 id="bytes">Bytes</h1>
+<h1 id="counting-to-ten">Counting to Ten</h1>
+<p>If I asked you to count to ten, you&rsquo;d probably rattle off 1, 2, 3&hellip;</p>
+<h1 id="asscii-text">ASSCII Text</h1>
+<p>if computers only understand 1s and 0s, how am I reading this text?</p>
+<h1 id="talk-nerdy-to-me">Talk nerdy to me</h1>
+<h3 id="a-binary-love-letter">A Binary Love Letter</h3>
+<blockquote>
+<p>01001001 00100000 00111100 00110011 00100000 01010101</p>
+</blockquote>
+<h1 id="testing-your-understanding">Testing your Understanding</h1>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+    
+      
+        © 2019 - 2020
+      
+       Nick Herrig 
+    
+    
+       · 
+      Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+
+    <script>
+(function(f, a, t, h, o, m){
+	a[h]=a[h]||function(){
+		(a[h].q=a[h].q||[]).push(arguments)
+	};
+	o=f.createElement('script'),
+	m=f.getElementsByTagName('script')[0];
+	o.async=1; o.src=t; o.id='fathom-script';
+	m.parentNode.insertBefore(o,m)
+})(document, window, '//analytics.example.com/tracker.js', 'fathom');
+fathom('set', 'siteId', 'ABCDE');
+fathom('trackPageview');
+</script>
+
+
+  </body>
+
+</html>
