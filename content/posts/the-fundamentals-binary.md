@@ -1,15 +1,16 @@
 +++
-date = "2020-03-24"
-title = "The Fundamentals: Binary"
-description = "This post introduces the concepts of bits, bytes, and binary." 
+date="2020-08-12"
+title="The Fundamentals: It's all Ones and Zeros 
+description="This post introduces the concepts of binary, number systems, and unicode." 
 categories=["fundamentals"]
+draft=true
 +++
 
-## Welcome Back Ladies and Gents!
+## Welcome Back Folks!
 Welcome back to The Fundamentals blog series.
-Where we have a conversation about technology concepts in a non-intimidating fashion. 
-The ultimate goal?
-To lower the barrier to entry to the technology industry, and inspire technology craftspeople of the future.
+Where we have conversations about fundamental technology concepts in a non-intimidating fashion. 
+The ultimate goal you might ask?
+To learn, grow, and be better. 
 If you haven't read the the fundamentals introduction post, feel free to [give it a skim](https://nickherrig.com/posts/the-fundamentals-intro/).
 Let's get started!
 
@@ -42,8 +43,7 @@ So do other operations like addition, subtraction, multiplication, and division.
 The context we are missing when we I ask you to "count to ten" is the number system.
 
 ## Binary
-The truth is, that we've all been living a lie thanks to the public school
-system.
+The truth is, that we've all been living a lie thanks to the public school system.
 
 ## Bits, the smallest unit of information.
 A bit can be either 0 or 1. 
@@ -60,3 +60,5 @@ if computers only understand 1s and 0s, how am I reading this text?
 > 01001001 00100000 00111100 00110011 00100000 01010101
 
 ## Testing your Understanding
+
+
