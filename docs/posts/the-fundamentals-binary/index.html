@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Nick Herrig">
+    <meta name="description" content="Nick Herrig&#39;s personal website">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The Fundamentals: It&#39;s all Ones and Zeros"/>
+<meta name="twitter:description" content="This post introduces the concepts of number systems, and character encodings"/>
+
+    <meta property="og:title" content="The Fundamentals: It&#39;s all Ones and Zeros" />
+<meta property="og:description" content="This post introduces the concepts of number systems, and character encodings" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nickherrig.com/posts/the-fundamentals-binary/" />
+<meta property="article:published_time" content="2020-09-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-09-06T00:00:00+00:00" />
+
+
+    
+      <base href="https://nickherrig.com/posts/the-fundamentals-binary/">
+    
+    <title>
+  The Fundamentals: It&#39;s all Ones and Zeros · nickherrig
+</title>
+
+    
+      <link rel="canonical" href="https://nickherrig.com/posts/the-fundamentals-binary/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather:300,700%7CSource+Code+Pro:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+
+    
+      
+      
+      <link rel="stylesheet" href="https://nickherrig.com/css/coder.min.a4f332213a21ce8eb521670c614470c58923aaaf385e2a73982c31dd7642decb.css" integrity="sha256-pPMyITohzo61IWcMYURwxYkjqq84XipzmCwx3XZC3ss=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="https://nickherrig.com/css/coder-dark.min.83a2010dac9f59f943b3004cd6c4f230507ad036da635d3621401d42ec4e2835.css" integrity="sha256-g6IBDayfWflDswBM1sTyMFB60DbaY102IUAdQuxOKDU=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="https://nickherrig.com/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://nickherrig.com/images/favicon-16x16.png" sizes="16x16">
+
+    <meta name="generator" content="Hugo 0.74.3" />
+  </head>
+
+  
+  
+    
+  
+  <body class="colorscheme-dark">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://nickherrig.com/">
+      nickherrig
+    </a>
+    
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-button float-right" for="menu-toggle"><i class="fas fa-bars"></i></label>
+    <ul class="navigation-list">
+      
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://nickherrig.com/quotes/">Quotes</a>
+          </li>
+        
+          <li class="navigation-item">
+            <a class="navigation-link" href="https://nickherrig.com/posts/">Blog</a>
+          </li>
+        
+      
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">The Fundamentals: It&#39;s all Ones and Zeros</h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fas fa-calendar"></i>
+              <time datetime='2020-09-06T00:00:00Z'>
+                September 6, 2020
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fas fa-clock"></i>
+              6-minute read
+            </span>
+          </div>
+          <div class="categories">
+  <i class="fas fa-folder"></i>
+    <a href="https://nickherrig.com/categories/fundamentals/">fundamentals</a></div>
+
+          
+        </div>
+      </header>
+
+      <div>
+        
+        <h2 id="welcome-back-folks">Welcome Back Folks</h2>
+<p>Welcome back to The Fundamentals blog series.
+Where we have conversations about fundamental technology concepts in a laid back and  non-intimidating fashion.
+The ultimate goal you might ask?
+To refresh, learn, grow, and be better engineers.
+If you haven&rsquo;t read the the fundamentals introduction post, feel free to <a href="https://nickherrig.com/posts/the-fundamentals-intro/">give it a skim</a>.
+Let&rsquo;s get started!</p>
+<h3 id="before-reading">Before Reading</h3>
+<p>Today we will be using <a href="https://en.wikipedia.org/wiki/Python_%28programming_language%29">Python3</a> as our programming language of choice to work through examples and help us learn.
+If you do not have Python3 installed, follow the <a href="https://www.python.org/downloads/">official Python docs</a> to install it on your particular computer.
+To check if you have Python3 run the command from the shell&hellip;</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">python3 --version
+</code></pre></div><h2 id="todays-topic">Todays Topic!</h2>
+<p><strong>It&rsquo;s all Ones and Zeros</strong></p>
+<p>Have you ever heard the phrase, &ldquo;it&rsquo;s all ones and zeros&rdquo;?
+When I first heard this phrase I was struggling with writing a program to message me about haircuts.
+No seriouslly, our barber in Des Moines has a 2 month wait, so I wanted to get a text when someone
+canceled their appointment last minute. At that time I was fairly early in learning about how
+computers worked under the hood. The friend joking said &ldquo;it can&rsquo;t be that hard, it&rsquo;s all ones and zeros&rdquo;.
+At the time, I didn&rsquo;t pay much attention to the comment. But as I continued my career I couldn&rsquo;t shake
+the comment. Could this really be the case? Could all programs, instagram feeds, tik tok videos, cat memes,
+boil down to ones and zeros. And if so, how could all these complex systems we rely on every day boil
+down to just two digits?</p>
+<h2 id="lets-count-to-ten">Let&rsquo;s count to Ten</h2>
+<p>If I asked you to count to ten, you&rsquo;d probably rattle off.</p>
+<blockquote>
+<p>0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10</p>
+</blockquote>
+<p>But what if I instaed started counting like this&hellip;</p>
+<blockquote>
+<p>0, 1, 10, 11, 100, 101, 110, 111, 1000, 1001, 1010</p>
+</blockquote>
+<p>Or even more strange&hellip;</p>
+<blockquote>
+<p>0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a</p>
+</blockquote>
+<p>Wait a minute, did you just use the letter &lsquo;a&rsquo; instead of &lsquo;10&rsquo;?</p>
+<p><strong>YOUBETCHA!</strong></p>
+<p>And the best part, all three of these are correct depending on the <em>context</em>.
+The <em>context</em> we are missing when I asked you to &ldquo;count to ten&rdquo; is the numeral system.</p>
+<h2 id="numeral-systems">Numeral Systems</h2>
+<p>Numeral systems are used as a way to express numbers utilizing digits, letters, and other symbols.
+When learning to count to 10 in school, the numeral system we were using was the decimal numerial system,
+also known as base-10 positional numeral system. Woah, when I first learned this was the case, I felt
+as though I had been living a lie! There are a <em>ton</em> of other extreemly important and useful numeral systems
+being used today.</p>
+<p>To list a few&hellip;</p>
+<ul>
+<li>Unary (Base-1)</li>
+<li>Octal  (Base-8)</li>
+<li>Hindu-Arabic (Most Common in the world!)</li>
+<li>Hexadecimal  (Base-16)</li>
+<li>Decimal  (Base-10)</li>
+<li>Binary (Base-2)</li>
+</ul>
+<p>Due to a number of factors, the binary or base-2 numerical system is used by
+<a href="https://en.wikipedia.org/wiki/Quantum_computing">almost</a> all computers.</p>
+<h3 id="a-python-example">A Python Example</h3>
+<p>Python, being a higher level language,  has a ton of slick <a href="https://docs.python.org/3/library/functions.html">built in functions</a>
+that help increase the productivity of developers. One of which we will utilize to learn about
+numberal systems is the built in called <code>bin()</code>. This function takes an integer number
+and converts it into a binary string prefied with &ldquo;0b&rdquo;. Let&rsquo;s try it out!</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">number_list = [<span style="color:#ff0;font-weight:bold">1</span>, <span style="color:#ff0;font-weight:bold">2</span>, <span style="color:#ff0;font-weight:bold">3</span>, <span style="color:#ff0;font-weight:bold">4</span>, <span style="color:#ff0;font-weight:bold">5</span>, <span style="color:#ff0;font-weight:bold">6</span>, <span style="color:#ff0;font-weight:bold">7</span>, <span style="color:#ff0;font-weight:bold">8</span>, <span style="color:#ff0;font-weight:bold">9</span>, <span style="color:#ff0;font-weight:bold">10</span>]
+
+<span style="color:#fff;font-weight:bold">for</span> number in number_list:
+    <span style="color:#fff;font-weight:bold">print</span>(<span style="color:#fff;font-weight:bold">bin</span>(number))
+</code></pre></div><p>We first create a list of numbers from 1 to 10.
+We then loop through that list, printing the binary conversion of the number.
+And as we expect! The output matches our counting to 10 in binary from above!</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">0b1
+0b10
+0b11
+0b100
+0b101
+0b110
+0b111
+0b1000
+0b1001
+0b1010
+</code></pre></div><h3 id="test-your-understanding">Test your understanding!</h3>
+<ol>
+<li>Count to 100 in Octal!</li>
+<li>Count to 100 in Hexadecimal!</li>
+</ol>
+<p>So how exactly is it that grandma&rsquo;s accidental facebook statuses condense down to 1s and 0s?</p>
+<h2 id="character-encodings">Character Encodings</h2>
+<p>Character encoding are used to take our number systems and provide additional <em>context</em>!
+The context is in the form of symbols and characters us humans utilize to communicate.
+There is a lot of interesting history around character encodings, but for now a few
+common ones out in the wild are</p>
+<ul>
+<li>ascii</li>
+<li>UTF-8</li>
+<li>ISO 8859-1</li>
+</ul>
+<p>So if this truly is the case, let&rsquo;s see an recent example that I came across.</p>
+<h3 id="a-python-example-1">A Python Example</h3>
+<p>Let&rsquo;s revisit the list of built in functions, this time to utilize <code>ord()</code>. This function takes an
+string representing one Unicode character and returns an integer representing the unicode code point
+of that character. UTF-8 is defined by the Unicode standard. Let&rsquo;s give it a go.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sentance = <span style="color:#0ff;font-weight:bold">&#39;héllo wõrld&#39;</span>
+
+<span style="color:#fff;font-weight:bold">for</span> character in sentance: 
+    <span style="color:#fff;font-weight:bold">print</span>(<span style="color:#fff;font-weight:bold">ord</span>(character))
+</code></pre></div><p>Our output should look something like this, an output of base-10 integers.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#ff0;font-weight:bold">104</span>
+<span style="color:#ff0;font-weight:bold">233</span>
+<span style="color:#ff0;font-weight:bold">108</span>
+<span style="color:#ff0;font-weight:bold">108</span>
+<span style="color:#ff0;font-weight:bold">111</span>
+<span style="color:#ff0;font-weight:bold">32</span>
+<span style="color:#ff0;font-weight:bold">119</span>
+<span style="color:#ff0;font-weight:bold">245</span>
+<span style="color:#ff0;font-weight:bold">114</span>
+<span style="color:#ff0;font-weight:bold">108</span>
+<span style="color:#ff0;font-weight:bold">100</span>
+</code></pre></div><p>We can double check our output against the <a href="https://www.utf8-chartable.de/unicode-utf8-table.pl?utf8=dec">UTF-8 character table</a></p>
+<h3 id="test-your-understanding-1">Test your understanding!</h3>
+<ol>
+<li>Print the alphabet in unicode</li>
+</ol>
+<h2 id="talk-nerdy-to-me">Talk nerdy to me</h2>
+<p>Last valentines day my lovely fiance Megan wrote me an AWESOME card.
+The front had a digital heart on it and displayed Megan&rsquo;s art skillz.</p>
+<p><img src="https://nickherrig.com/images/love-letter.jpg" alt="letter"></p>
+<p>I was impressed when I saw it, but soon realized that there was a hidden message lurking on the inside.</p>
+<p><img src="https://nickherrig.com/images/love-letter-content.jpg" alt="contents"></p>
+<p>It appeared to be <em>all ones and zeros</em>! I assumed that this letter was written in the binary number system!
+Let&rsquo;s take a look at the message, and attempt to decode it using python!</p>
+<h3 id="a-binary-love-letter">A Binary Love Letter</h3>
+<p>The first step, and most tedious was copying the message from written text to text on my computer.
+I used my favorite text editor vim to create the file &ldquo;love-not.txt&rdquo;.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">01001101
+01111001
+00100000
+01000100
+01100101
+01100001
+01110010
+01100101
+01110011
+01110100
+00100000
+01010110
+01100001
+01101100
+01100101
+01101110
+01110100
+01101001
+01101110
+0110101
+00100000
+01001001
+00100000
+01001100
+01101111
+01110110
+01100101
+00100000
+01011001
+01101111
+01110101
+</code></pre></div><p>Now that we have our base-2 numbers in a file, we can read them into our python program.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#fff;font-weight:bold">with</span> <span style="color:#fff;font-weight:bold">open</span>(<span style="color:#0ff;font-weight:bold">&#34;love-note.txt&#34;</span>) <span style="color:#fff;font-weight:bold">as</span> f:
+    byte_list = f.read().splitlines()
+</code></pre></div><p>We read our file line by line into a list of strings. Next we can use the <code>int()</code> built in function
+to construct a new list of base-10 numbers.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">num_list = [ <span style="color:#fff;font-weight:bold">int</span>(byte, <span style="color:#ff0;font-weight:bold">2</span>) <span style="color:#fff;font-weight:bold">for</span> byte in byte_list ]
+</code></pre></div><p>This format is called a list comprehension. List comprehensions provide a concise way of creating a list.
+You can read more about this syntax <a href="https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions">here</a>
+Anyway, now that we have a list of base-10 integers, let&rsquo;s use the built in <code>chr()</code> function to build a list
+of unicode characters. Lastly, let&rsquo;s build a sentance from the list with the join method.</p>
+<div class="highlight"><pre style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">char_list = [ <span style="color:#fff;font-weight:bold">chr</span>(num) <span style="color:#fff;font-weight:bold">for</span> num in num_list]
+sentance = <span style="color:#0ff;font-weight:bold">&#34;&#34;</span>.join(char_list)
+</code></pre></div><p>Our output should now read <code>My Dearest Valentin5 I Love You</code>.
+Ohhh no&hellip; Megan had a typo&hellip; I guess it can be forgiven due to the fact that she wrote 247 1s and 0s!</p>
+<h3 id="test-your-understanding-2">Test your understanding</h3>
+<ol>
+<li>The missing character is an e, what is the base 10 number representation? what about binary?</li>
+</ol>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+    
+    
+      
+        © 2019 - 2020
+      
+       Nick Herrig 
+    
+    
+       · 
+      Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+    
+    
+  </section>
+</footer>
+
+    </main>
+
+    
+
+    <script>
+(function(f, a, t, h, o, m){
+	a[h]=a[h]||function(){
+		(a[h].q=a[h].q||[]).push(arguments)
+	};
+	o=f.createElement('script'),
+	m=f.getElementsByTagName('script')[0];
+	o.async=1; o.src=t; o.id='fathom-script';
+	m.parentNode.insertBefore(o,m)
+})(document, window, '//analytics.example.com/tracker.js', 'fathom');
+fathom('set', 'siteId', 'ABCDE');
+fathom('trackPageview');
+</script>
+
+
+  </body>
+
+</html>
