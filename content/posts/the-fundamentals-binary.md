@@ -1,6 +1,6 @@
 +++
 date="2020-09-06"
-title="The Fundamentals: It's all Ones and Zeros"
+title="The Fundamentals: It's all Ones and Zeroes"
 description="This post introduces the concepts of number systems, and character encodings"
 categories=["fundamentals"]
 +++
@@ -22,18 +22,18 @@ To check if you have Python3 run the command from the shell...
 python3 --version
 ```
 
-## Todays Topic!
+## Today's Topic!
 
-**It's all Ones and Zeros**
+**It's all Ones and Zeroes**
 
-Have you ever heard the phrase, "it's all ones and zeros"?
+Have you ever heard the phrase, "it's all ones and zeroes"?
 When I first heard this phrase I was struggling with writing a program to message me about haircuts.
-No seriouslly, our barber in Des Moines has a 2 month wait, so I wanted to get a text when someone
-canceled their appointment last minute. At that time I was fairly early in learning about how 
-computers worked under the hood. The friend joking said "it can't be that hard, it's all ones and zeros".
+No seriously, our barber in Des Moines has a 2 month wait, so I wanted to get a text when someone
+cancelled their appointment last minute. At that time I was fairly early in learning about how 
+computers worked under the hood. The friend joking said "it can't be that hard, it's all ones and zeroes".
 At the time, I didn't pay much attention to the comment. But as I continued my career I couldn't shake 
-the comment. Could this really be the case? Could all programs, instagram feeds, tik tok videos, cat memes, 
-boil down to ones and zeros. And if so, how could all these complex systems we rely on every day boil
+the comment. Could this really be the case? Could all programs, Instagram feeds, TikTok videos, and cat memes 
+boil down to ones and zeroes? And if so, how could all these complex systems we rely on every day boil
 down to just two digits? 
 
 ## Let's count to Ten
@@ -60,7 +60,7 @@ The _context_ we are missing when I asked you to "count to ten" is the numeral s
 Numeral systems are used as a way to express numbers utilizing digits, letters, and other symbols. 
 When learning to count to 10 in school, the numeral system we were using was the decimal numerial system,
 also known as base-10 positional numeral system. Woah, when I first learned this was the case, I felt
-as though I had been living a lie! There are a *ton* of other extreemly important and useful numeral systems
+as though I had been living a lie! There are a *ton* of other extremely important and useful numeral systems
 being used today. 
 
 To list a few...
@@ -79,7 +79,7 @@ Due to a number of factors, the binary or base-2 numerical system is used by
 Python, being a higher level language,  has a ton of slick [built in functions](https://docs.python.org/3/library/functions.html)
 that help increase the productivity of developers. One of which we will utilize to learn about 
 numberal systems is the built in called `bin()`. This function takes an integer number 
-and converts it into a binary string prefied with "0b". Let's try it out!
+and converts it into a binary string prefixed with `0b`. Let's try it out!
 
 ```python
 number_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -109,7 +109,7 @@ And as we expect! The output matches our counting to 10 in binary from above!
 1. Count to 100 in Octal!
 2. Count to 100 in Hexadecimal!
 
-So how exactly is it that grandma's accidental facebook statuses condense down to 1s and 0s?
+So how exactly is it that grandma's accidental Facebook statuses condense down to 1s and 0s?
 
 ## Character Encodings
 Character encoding are used to take our number systems and provide additional _context_! 
@@ -117,7 +117,7 @@ The context is in the form of symbols and characters us humans utilize to commun
 There is a lot of interesting history around character encodings, but for now a few
 common ones out in the wild are
 
-- ascii
+- ASCII
 - UTF-8
 - ISO 8859-1
 
@@ -151,13 +151,13 @@ Our output should look something like this, an output of base-10 integers.
 100
 ```
 
-We can double check our output against the [UTF-8 character table](https://www.utf8-chartable.de/unicode-utf8-table.pl?utf8=dec)
+We can double check our output against the [UTF-8 character table](https://www.utf8-chartable.de/unicode-utf8-table.pl?utf8=dec).
 
 ### Test your understanding!
 1. Print the alphabet in unicode 
 
 ## Talk nerdy to me
-Last valentines day my lovely fiance Megan wrote me an AWESOME card. 
+Last Valentine's Day, my lovely fiance Megan wrote me an AWESOME card. 
 The front had a digital heart on it and displayed Megan's art skillz.
 
 ![letter](/images/love-letter.jpg)
@@ -166,12 +166,12 @@ I was impressed when I saw it, but soon realized that there was a hidden message
 
 ![contents](/images/love-letter-content.jpg)
 
-It appeared to be _all ones and zeros_! I assumed that this letter was written in the binary number system! 
+It appeared to be _all ones and zeroes_! I assumed that this letter was written in the binary number system! 
 Let's take a look at the message, and attempt to decode it using python!
 
 ### A Binary Love Letter
 The first step, and most tedious was copying the message from written text to text on my computer.
-I used my favorite text editor vim to create the file "love-not.txt". 
+I used my favorite text editor VIM to create the file "love-note.txt". 
 
 ```text
 01001101
@@ -218,7 +218,7 @@ We read our file line by line into a list of strings. Next we can use the `int()
 to construct a new list of base-10 numbers.
 
 ```python
-num_list = [ int(byte, 2) for byte in byte_list ]
+num_list = [int(byte, 2) for byte in byte_list]
 ```
 This format is called a list comprehension. List comprehensions provide a concise way of creating a list.
 You can read more about this syntax [here](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions)
@@ -226,7 +226,7 @@ Anyway, now that we have a list of base-10 integers, let's use the built in `chr
 of unicode characters. Lastly, let's build a sentance from the list with the join method. 
 
 ```python
-char_list = [ chr(num) for num in num_list]
+char_list = [chr(num) for num in num_list]
 sentance = "".join(char_list)
 ```
 
@@ -234,4 +234,4 @@ Our output should now read `My Dearest Valentin5 I Love You`.
 Ohhh no... Megan had a typo... I guess it can be forgiven due to the fact that she wrote 247 1s and 0s! 
 
 ### Test your understanding
-1. The missing character is an e, what is the base 10 number representation? what about binary?
+1. The missing character is an "e". What is its base 10 number representation? What about binary?
