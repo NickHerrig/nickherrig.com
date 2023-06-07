@@ -17,9 +17,19 @@ export default function Posts() {
   return (
     <main>
       <h1>Posts</h1>
-      <h2>
-        {JSON.stringify( posts, null, 2)}
-      </h2>
+
+      <ul>
+        {posts.map((post) => (
+          <li key={post.slug}>
+            <Link
+              to={post.slug}
+              className="text-blue-600 hover:underline"
+            >
+              {post.title}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </main>
   );
   }
