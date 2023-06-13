@@ -1,10 +1,21 @@
-import { json } from "@remix-run/node"
+import { LoaderArgs, json } from "@remix-run/node"
 import { Link, Outlet, useLoaderData } from "@remix-run/react"
-import { getPosts } from "~/models/post.server"
 
+import createServerSupabase from "~/utils/supabase.server"
 
-export const loader = async () => {
-    return json({posts: await getPosts()})
+export const loader = async ({request}: LoaderArgs) => {
+    const response = new Response()
+    const supabase = createServerSupabase({request, response})
+  
+    const { data: posts, error} = await supabase
+        .from('posts')
+        .select('title,slug')
+
+    if (error) {
+        console.log(error)
+    }
+
+    return json({ posts: posts ?? [] }, {headers: response.headers})
 }
 
 export default function PostAdmin(){

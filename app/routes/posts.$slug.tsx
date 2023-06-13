@@ -3,14 +3,21 @@ import { json } from "@remix-run/node"
 import { useLoaderData } from "@remix-run/react"
 import { marked } from "marked"
 
-import {getPost} from "~/models/post.server"
+import createServerSupabase from "~/utils/supabase.server"
 
 
-export const loader = async ({ params }: LoaderArgs) => {
+export const loader = async ({ params, request }: LoaderArgs) => {
     if (!params.slug) {
         return `params.slug is required`
     }
-    const posts = await getPost(params.slug!)
+
+    const response = new Response()
+    const supabase = createServerSupabase({request, response})
+    const {data: posts, error } = await supabase
+        .from('posts')
+        .select("*")
+        .eq('slug', params.slug)
+
     if (!posts) {
         return `Posts not found: ${params.slug}`
     }
