@@ -1,8 +1,7 @@
 import { ActionArgs, json, redirect } from "@remix-run/node";
-import { Form, useActionData } from "@remix-run/react";
+import { Form, useActionData, useNavigation } from "@remix-run/react";
 
-
-import { createPost } from "~/models/post.server"
+import createServerSupabase from "~/utils/supabase.server"
 
 export const action = async ({ request }: ActionArgs) => {
     const formData = await request.formData()
@@ -26,7 +25,22 @@ export const action = async ({ request }: ActionArgs) => {
         return json(errors)
     }
 
-    await createPost(title, slug, markdown)
+    if (slug === null || markdown === null || title === null ) {
+        return json({errors: "title, markdown, and slug cannot be null"})
+    }
+
+    await new Promise((res) => setTimeout(res, 1000))
+    
+    const response = new Response()
+    const supabase = createServerSupabase({request, response})
+    const { data, error } = await supabase
+        .from('posts')
+        .insert([
+            {   slug: slug, 
+                title: title,
+                markdown: markdown, 
+            },
+        ])
 
     return redirect("/posts/admin")
 }
@@ -36,6 +50,11 @@ const inputClassName =  `w-full rounded border border-gray-500 px-2 py-1 text-lg
 
 export default function NewPost() {
     const errors = useActionData<typeof action>()
+
+    const navigation = useNavigation()
+    const isCreating = Boolean(
+        navigation.state === "submitting"
+    )
 
     return (
         <Form method="post">
@@ -87,8 +106,9 @@ export default function NewPost() {
                 <button
                     type="submit"
                     className="rounded bg-blue-500 py-2 px-4 text-white hover:bg-blue-600 focus:bg-blue-400 disabled:bg-blue-300"
+                    disabled={isCreating}
                 >
-                    Create Post
+                    {isCreating ? "Creating..." : "Create Post"}
                 </button>
             </p>
 
