@@ -1,5 +1,5 @@
 import { json, type LinksFunction, type LoaderArgs } from "@remix-run/node";
-import stylesheet from "~/tailwind.css";
+import styles from "~/tailwind.css";
 import { useEffect, useState } from "react";
 import {
   Links,
@@ -24,7 +24,7 @@ export type SupabaseOutletContext = {
 }
 
 export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: stylesheet },
+  { rel: "stylesheet", href: styles },
 ];
 
 export const loader = async ({request}: LoaderArgs) => {

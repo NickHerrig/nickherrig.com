@@ -15,21 +15,12 @@ export const action = async ({ request }: ActionArgs) => {
         markdown: markdown ? null: "Markdown is required",
     }
 
-    // TODO Check string type errors 
-    // TODO add slug validation for URL acceptance
-
     const hasErrors = Object.values(errors).some(
         (errorMessage) => errorMessage
     )
     if (hasErrors) {
         return json(errors)
     }
-
-    if (slug === null || markdown === null || title === null ) {
-        return json({errors: "title, markdown, and slug cannot be null"})
-    }
-
-    await new Promise((res) => setTimeout(res, 1000))
     
     const response = new Response()
     const supabase = createServerSupabase({request, response})
