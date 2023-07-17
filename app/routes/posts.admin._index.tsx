@@ -1,16 +1,10 @@
-import { Link } from "@remix-run/react";
-
-
 
 export default function AdminIndex() {
 
-    
-
     return (
-        <p>
-            <Link to="new" className="text-blue-600 underline">
-                Create a New Post
-            </Link>
-        </p>
+        <>
+            <h1> TODO redirect if logged out</h1>
+            <h1> Else: show Create New Post Link</h1>
+        </>
     )
 }

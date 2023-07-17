@@ -1,5 +1,6 @@
 /** @type {import('@remix-run/dev').AppConfig} */
 module.exports = {
+  tailwind: true,
   ignoredRouteFiles: ["**/.*"],
   // When running locally in development mode, we use the built-in remix
   // server. This does not understand the vercel lambda module format,
@@ -15,5 +16,4 @@ module.exports = {
     v2_normalizeFormMethod: true,
     v2_routeConvention: true,
   },
-  tailwind: true,
 };
