@@ -1,0 +1,35 @@
+baseURL: https://nickherrig.com/
+title: Nick Herrig
+languageCode: en-us
+theme: PaperMod
+
+menu:
+  main:
+    - identifier: Archives
+      name: Archives
+      url: archives
+      weight: 10
+    - identifier: Resume
+      name: Resume
+      url: https://resume.nickherrig.com
+      weight: 20
+
+params:
+  defaultTheme: auto
+  # profile-mode
+  profileMode:
+    enabled: true # needs to be explicitly set
+    title: Hey, I'm Nick! 👋
+    subtitle: "" # TODO 
+    imageUrl: "https://avatars.githubusercontent.com/u/33797354?v=4"
+    imageWidth: 220
+    imageHeight: 220
+    imageTitle: nick_headshot
+    buttons:
+      - name: Writing
+        url: posts
+
+outputs:
+  home:
+    - HTML
+    - JSON # is necessary
