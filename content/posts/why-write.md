@@ -5,7 +5,7 @@ date: "2024-01-07"
 description: "My foray back into writing and what I hope to get out of it."
 ShowToc: true
 TocOpen: false
-draft: true
+draft: false
 ---
 
 I've been thinking about writing more. If I'm being honest with myself, I've been considering writing more for a while. However, I haven't been writing, but this year I'm changing that. To make this change, I need to confront why I haven't written more in the past and what I hope to gain from writing in the future.
