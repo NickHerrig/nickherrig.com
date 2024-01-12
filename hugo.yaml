@@ -28,6 +28,7 @@ params:
     buttons:
       - name: Writing
         url: posts
+  ShowCodeCopyButtons: true
 
 outputs:
   home:
