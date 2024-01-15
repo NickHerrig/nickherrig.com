@@ -29,6 +29,10 @@ params:
       - name: Writing
         url: posts
   ShowCodeCopyButtons: true
+  editPost:
+    URL: "https://github.com/NickHerrig/nickherrig.com/tree/master/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
 
 outputs:
   home:
