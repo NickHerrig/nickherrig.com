@@ -233,7 +233,7 @@ if __name__ == '__main__':
             sink.write_frame(frame=annotated_frame)
 ```
 
-In this code, we add `text_scale` as a new dynamic value for labeling the `tracker_id`. Next, we add a Trace and Label Annotator with these dynamic values. We also create a `ByteTrack` object to track our detections passing in the video's frame rate. From there, all we need to do is update the detections with our byte_tracker results using the method `update_with_detect ions`. Lastly, we create a list of labels from the tracker_ids and pass them to the label annotator while also utilzing the `TraceAnnotator` to trace the path of each detection.
+In this code, we add `text_scale` as a new dynamic value for labeling the `tracker_id`. Next, we add a Trace and Label Annotator with these dynamic values. We also create a `ByteTrack` object to track our detections passing in the video's frame rate. From there, all we need to do is update the detections with our byte_tracker results using the method `update_with_detections`. Lastly, we create a list of labels from the tracker_ids and pass them to the label annotator while also utilzing the `TraceAnnotator` to trace the path of each detection.
 
 #### GOTCHA - Stacking Trace with Segmentation Annotations
 
