@@ -33,8 +33,11 @@ params:
     URL: "https://github.com/NickHerrig/nickherrig.com/tree/master/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
+  ShowRssButtonInSectionTermList: true
+  
 
 outputs:
   home:
     - HTML
     - JSON # is necessary
+    - RSS
