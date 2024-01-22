@@ -13,11 +13,11 @@ I've been fishing for 25 years. Fishing for me is both an adventure and a chance
 
 ![deep-sea-fishing](/images/icefishing2024/deep-sea-fishing.jpg)
 
-Ice fishing, on the other hand, is new territory for me. This is the second year I've had the opportunity to give it a go. Ice fishing is a different beast than the other styles of fishing. It's both psychotic and exciting. You're battling sub-zero tempatures on snow covered lakes at a chance for a good bite and even better company. So here's a little recap of from 2024 ice fishing adventure.
+Ice fishing, on the other hand, is new territory for me. This is the second year I've had the opportunity to give it a go. Ice fishing is a different beast than the other styles of fishing. It's both psychotic and exciting. You're battling sub-zero tempatures on snow covered lakes at a chance for a good bite and even better company. So here's a little recap from our 2024 ice fishing adventure.
 
 ## The Location
 
-This year's trip was in Merrifield Minnesota, which is about 10 miles north of the larger Brainerd MN. We stayed in an airbnb on the west shore of [Sliver Lake](https://www.dnr.state.mn.us/areas/fisheries/eastmetro/lakes/silverNB.html) which is marked on the map as a red circle. Our main game plan was to fish [Edward Lake](https://www.dnr.state.mn.us/lakefind/lake.html?id=18030500) via vehicle access marked by a green circle. Edward Lake has a max depth of 75 feet, and is known for great structure that supports walleye, northern pike, and panfish.
+This year's trip was in Merrifield, Minnesota, which is about 10 miles north of the larger Brainerd, MN. We stayed in an airbnb on the west shore of [Sliver Lake](https://www.dnr.state.mn.us/areas/fisheries/eastmetro/lakes/silverNB.html) which is marked on the map as a red circle. Our main game plan was to fish [Edward Lake](https://www.dnr.state.mn.us/lakefind/lake.html?id=18030500) via vehicle access marked by a green circle. Edward Lake has a max depth of 75 feet, and is known for great structure that supports walleye, northern pike, and panfish.
 
 ![lake-map](/images/icefishing2024/lake-map.jpg)
 
@@ -55,9 +55,9 @@ One thing that is constant on an ice fishing trip is that things break and chaos
 
 ![wes-headshot](/images/icefishing2024/wes-headshot.jpg)
 
-### Andrew - The Improver
+### Andrew - The Optimizer
 
-Andrew in an OG when it comes to this ice fishing trip. Each year, he leaves the trip thinking "what could we do differently to make it less chaotic and more successful next year." This continous improvement was seen this year through the food situation. Last year the calorie intake was mostly chips, candy, and beer. This year however; we were blessed with a delicous breakfast casserole that gave us the energy we needed to battle the environment. I'm looking forward to seeing Andrew's suggestions for next year. Andrew took the win on biggest fish, with this nice northern pike from Edward Lake.
+Andrew in an OG when it comes to this ice fishing trip. Each year, he leaves the trip thinking "what could we do differently to make it less chaotic and more successful next year." This continous improvement was seen this year through the food situation. Last year the calorie intake was mostly chips, candy, and beer. This year however; we were blessed with a delicous breakfast casserole (prepared by his wife, Monica) that gave us the energy we needed to battle the environment. I'm looking forward to seeing Andrew's suggestions for next year. Andrew took the win on biggest fish, with this nice northern pike from Edward Lake.
 
 ![andrew-pike](/images/icefishing2024/andrew-pike.jpg)
 
