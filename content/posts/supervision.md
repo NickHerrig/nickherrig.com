@@ -1,7 +1,7 @@
 ---
 author: ["Me"]
 title: "Supervision - First Impressions"
-date: "2024-01-10"
+date: "2024-01-14"
 description: "My first impressions while learning the supervision python package from Roboflow."
 tags: [computer vision, python, supervision, YOLOv8]
 ShowToc: true
