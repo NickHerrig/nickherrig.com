@@ -6,7 +6,7 @@ description: "An ice fishing adventure in Merrifield Minnesota"
 tags: [ice fishing]
 ShowToc: true
 TocOpen: false
-draft: true
+draft: false
 ---
 
 I've been fishing for 25 years. Fishing for me is both an adventure and a chance to disconnect. As a kid, I would fish local honey holes with [texas rigs](https://en.wikipedia.org/wiki/Texas_rig) for large mouth bass. On family vacations to Florida, I'd plan [Surf fishing](https://en.wikipedia.org/wiki/Surf_fishing#Species) excursions in the Atlantic for sharks, stingrays, and anything else that would bite. Recently, I've had the chance to fish with the father-in-law for Walleye and Small mouth in [Sioux Narrows](https://en.wikipedia.org/wiki/Sioux_Narrows-Nestor_Falls). If there's a fishing trip, you can count me in.
