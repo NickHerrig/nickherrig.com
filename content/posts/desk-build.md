@@ -6,7 +6,7 @@ description: "The planning and execution of building my own mega desk."
 tags: [hardware]
 ShowToc: true
 TocOpen: false
-draft: true 
+draft: false 
 ---
 
 For as long as I can remember, I've never been particularly proud or excited about my desk setup. My current setup, is a cheap 25" x 50" IKEA desk that is neither personalized or very functional. It's made of a cheap feeling cardboard-like material, lacks adiquite space, and causes frustration from time to time.
