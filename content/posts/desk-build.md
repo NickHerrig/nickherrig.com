@@ -9,9 +9,9 @@ TocOpen: false
 draft: false 
 ---
 
-For as long as I can remember, I've never been particularly proud or excited about my desk setup. My current setup, is a cheap 25" x 50" IKEA desk that is neither personalized or very functional. It's made of a cheap feeling cardboard-like material, lacks adiquite space, and causes frustration from time to time.
+For as long as I can remember, I've never been particularly proud or excited about my desk setup. My current setup is a cheap 25" x 50" IKEA desk that is neither personalized nor very functional. It's made of a cheap-feeling cardboard-like material, lacks adequate space, and causes frustration from time to time.
 
-As I was thinking about these problems, I remembered an epic scene from Ricky Gervais' and Stephen Merchant's American adoptation of "The Office". Jim and Dwight were battling out who could build the most epic desk. Mega desk and quad desk were true masterpieces of commedy.
+As I was thinking about these problems, I remembered an epic scene from Ricky Gervais and Stephen Merchant's American adaptation of "The Office". Jim and Dwight were battling out who could build the most epic desk. Mega desk and quad desk were true masterpieces of commedy.
 
 {{< youtube nwoIJxDRu8M >}}
 
@@ -31,16 +31,16 @@ When setting out to build mega desk, I didn't really know where to start. The op
 
 So for this project to be a success I would need to focus on fixing these pain points. I would need to set out to:
 
-1. Use better material, maybe a hardwood or metalic material?
+1. Use better material (maybe a hardwood or metalic material).
 2. Build a bigger desk.
 3. Incorporate a desk frame with a standing option.
 4. Use material or paint to match the space.
 
-With this brainstorm session in mind, I wondered what other people who built their own desk had experienced. Luckily, I've got a great tech friend group that are always willing to jam on ideas. I posed a simple question on our discord server.
+With this brainstorm session in mind, I wondered what other people who built their own desk had experienced. Luckily, I've got a great tech friend group that is always willing to jam on ideas. I posed a simple question on our Discord server.
 
 ![discord-advice](/images/desk/discord-advice.png)
 
-Advice came in hot! A common thread was to utilize [butcher block](https://en.wikipedia.org/wiki/Butcher_block) as the top, and to purchase a lift frame to pair with the hardwood. With that information, I was off to the races!
+Advice came in hot! A common thread was to utilize [butcher block](https://en.wikipedia.org/wiki/Butcher_block) as the top and to purchase a lift frame to pair with the hardwood. With that information, I was off to the races!
 
 ## The Game Plan
 
@@ -48,25 +48,25 @@ With a solid collection of research under my belt, it was time to craft the buil
 
 ### A Note on Impatience
 
-The most challenging part of the build was sourcing the materials to meet the deadline. I ordered the standing desk frame from Amazon, and once it arrived, I had 2 days remaining to make the desk a reality. Sourcing the perfect sized butcher block in that time frame turned out to be more challenging than I originally suspected. Lowes, Home Depot, and Ikea all have great selections. There were also a few local places in Des Moines that also had a decent variety. From my measurements of my existing space, the perfect size desk would be comprised of two 25" width by 60" length butcher block slabs. Sadly, I would have had to wait another week for this material to be delivered. Instead, I settled for taking the impatient route. This meant purchasing the 25" width by 72" long butcher block slabs. This made total length of the main desk `25 + 72 = 97 in` long; MEGA DESK!  
+The most challenging part of the build was sourcing the materials to meet the deadline. I ordered the standing desk frame from Amazon and, once it arrived, I had 2 days remaining to make the desk a reality. Sourcing the perfect sized butcher block in that time frame turned out to be more challenging than I originally suspected. Lowe's, Home Depot, and IKEA all have great selections. There were also a few local places in Des Moines that also had a decent variety. From my measurements of my existing space, the perfect size desk would be comprised of two 25" width by 60" length butcher block slabs. Sadly, I would have had to wait another week for this material to be delivered. Instead, I settled for taking the impatient route. This meant purchasing the 25" width by 72" long butcher block slabs. This made total length of the main desk `25 + 72 = 97` inches long: MEGA DESK!  
 
 ### The Materials
 
 Here is the list of the final BOM I purchased:
 
-- [A Vivo L shaped standing desk frame.](https://www.amazon.com/dp/B07WFR5WB8?psc=1&ref=ppx_yo2ov_dt_b_product_details)
-- [A couple 72"L x 25"W x 1.5"T Aspen + Roth Hevea Butcher Block slabs.](https://www.lowes.com/pd/allen-roth-Hevea-Countertops-72-in-x-25-in-x-1-5-in-Natural-Straight-Butcher-Block-Rubberwood-Countertop/5013817629)
-- [Oil based wood stain](https://www.lowes.com/pd/WATCO-16-fl-oz-Butcher-block-oil/5001495623)
-- [Oil based finish](https://www.lowes.com/pd/Minwax-32-fl-oz-Satin-Oil-Based-Polyurethane/999914537)
+- [A Vivo L shaped standing desk frame](https://www.amazon.com/dp/B07WFR5WB8?psc=1&ref=ppx_yo2ov_dt_b_product_details)
+- [A couple 72"L x 25"W x 1.5"T Aspen + Roth Hevea Butcher Block slabs](https://www.lowes.com/pd/allen-roth-Hevea-Countertops-72-in-x-25-in-x-1-5-in-Natural-Straight-Butcher-Block-Rubberwood-Countertop/5013817629)
+- [Oil-based wood stain](https://www.lowes.com/pd/WATCO-16-fl-oz-Butcher-block-oil/5001495623)
+- [Oil-based finish](https://www.lowes.com/pd/Minwax-32-fl-oz-Satin-Oil-Based-Polyurethane/999914537)
 - [Foam paint brushes](https://www.lowes.com/pd/Project-Source/5013767135)
 
 ## Execution
 
-Once I had the list of materials the build was suprisingly straight forward. The standing desk came with super clear assembly instructions, including going about drilling pilot holes for screws, how to/where to add brace plates, and how to lay out the electrical components.
+Once I had the list of materials the build was suprisingly straightforward. The standing desk came with super clear assembly instructions, including going about drilling pilot holes for screws, how/where to add brace plates, and how to lay out the electrical components.
 
 I followed the following loose steps:
 
-- Get the butcher block into  the correct possition. This meant aligning the desk upside down and inverted from it's final location. This step was pretty important as the desk is pretty heavy, esspecially after mounting the frame.
+- Get the butcher block into  the correct possition. This meant aligning the desk upside down and inverted from it's final location. This step was pretty important as the desk is pretty heavy, especially after mounting the frame.
 
 ![butcher-block](/images/desk/butcher_block.jpg)
 ![butcher-layout](/images/desk/butcher_layout.jpg)
@@ -83,11 +83,11 @@ I followed the following loose steps:
 
 ![mount-desk](/images/desk/mount_desk.jpg)
 
-- Flipping the desk over, and into position was by far the hardest part. For a desk this size it required a minimum of two people. Luckily my wifey Megan came in clutch here!
+- Flipping the desk over and into position was by far the hardest part. For a desk this size it required a minimum of two people. Luckily my wifey Megan came in clutch here!
 
 ![flipped-desk](/images/desk/flipped_desk.jpg)
 
-- Staining and finishing the desk came next. I only applied one coat of stain and one coat of finish with a few hours in between for the stain to dry. Note to self, crack a window next time to avoid your room smelling like chemicals. For future builds, staining and finishing might be the first step of the build, but I was happy with this method. Side note, I did not stain and finish the bottom of the desk out of laziness (But let's keep that between us).
+- Staining and finishing the desk came next. I only applied one coat of stain and one coat of finish with a few hours in-between for the stain to dry. Note to self: crack a window next time to avoid your room smelling like chemicals. For future builds, staining and finishing might be the first step of the build but I was happy with this method. Side note: I did not stain and finish the bottom of the desk out of laziness (but let's keep that between us).
 
 ![stained-desk](/images/desk/stained_desk.jpg)
 
