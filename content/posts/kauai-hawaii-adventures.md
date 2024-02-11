@@ -49,11 +49,15 @@ From here, we headed back to the airport. The ride was about 50 minutes total. I
 
 ### Na Pali Coast Boat Ride
 
-Since Kauai is an island, there are plenty of water activities available. After seeing the Na Pali Coast from air, we opted for a closer look at the coast line via a boat ride and snorkling adventure. There are a few great companies to choose from, but we ended up hanging out with Captain J's. The trip started with an early sighting of a pod of more than 20 bottlenose dolphins. While we ventured on, we made our way up the Na Pali coastline and were greeted by impressive and incredible cave formations.
+After seeing the Na Pali Coast from air, we opted for a closer look at the coast line via a boat ride and snorkling adventure. There are a few great companies to choose from, but we ended up hanging out with Captain J's. The trip started with an early sighting of a pod of more than 20 bottlenose dolphins. The Captain said this was rare to see so many feeding at the same time, so we were gratful to have stumbled on them. While we ventured on, we made our way up west side of Kauai towards the Na Pali coastline. We were quickly greeted by impressive cave formations.
 
-{{< figure src="/images/kauai_adventures/placeholder.jpg" title="Na Pali Coast caves" >}}
+{{< figure src="/images/kauai_adventures/caves.jpeg" title="Na Pali Coast caves" >}}
 
-On our way to the snorkling spot, we had the wild chance of spotting a group of humpback whales. The whales were showing their tail and fins, most likely in an attempt to impress the larger female of the group. Snorkling was also full of bright colored fish, including a red spotted octopus that Megan spotted in the water.
+The coastline is hard to put into words without seeing it yourself. It's a 17 mile stretch of volcanic rocks, stunning cliffs, and lush greenery. It's inaccesible by road, however, can be accessed by the Kalalau trail. Sadly, due to weather, We weren't able to do this trail. The river was too high due to higher than noraml rainfall during our stay. The boat ride allowed us to get a different, less exhausting view.
+
+{{< figure src="/images/kauai_adventures/napali_boat.jpeg" title="Boat views of the Na Pali Coast" >}}
+
+On our way to the snorkling spot, we had another encounter with wildlife. This time, we spotted a group of humpback whales. The whales were showing their tails and fins, most likely in an attempt to impress the larger female of the group. It was a magical moment seening these large creatures. We finally made our way to our snorkling spot. Although Hawaii isn't known for coral reefs, the rock formations were filled with bright colored fish, including a red spotted octopus that Megan spotted in the water.
 
 ### Honorable Mentions
 
