@@ -6,7 +6,7 @@ description: "Experiments with fixing my slow github repo cloning/pulling with i
 tags: [web]
 ShowToc: true
 TocOpen: false
-draft: true 
+draft: false
 ---
 
 I was in the process of cloning the code for this website from github on a new laptop when I noticed something.
@@ -132,7 +132,7 @@ In order to get this working for my GitHub Pages hosting, it appears that with [
           lfs: true
 ```
 
-At this point, I made sure to initialize git LFS and track specific file types. 
+At this point, I made sure to initialize git LFS and track specific file types.
 
 ```shell
 git lfs install
@@ -146,3 +146,26 @@ git lfs track "*.mp3"
 
 ```
 
+Since git lfs only starts tracking newly added files, we'll want to migrate our existing files. 
+We can do this by running.
+
+```shell
+git lfs migrate import --include="*.jpg,*.jpeg,*.png,*.webp,*.mp4,*.mp3" --everything
+git push --force
+```
+
+And just like that, we've improved the speed of our repo clones from 11.8 seconds to 4 seconds.
+
+```shell
+Cloning into 'nickherrig.com'...
+remote: Enumerating objects: 867, done.
+remote: Counting objects: 100% (397/397), done.
+remote: Compressing objects: 100% (237/237), done.
+remote: Total 867 (delta 129), reused 393 (delta 127), pack-reused 470
+Receiving objects: 100% (867/867), 10.11 MiB | 10.48 MiB/s, done.
+Resolving deltas: 100% (316/316), done.
+Filtering content: 100% (36/36), 3.08 MiB | 1.85 MiB/s, done.
+git clone git@github.com:NickHerrig/nickherrig.com.git  0.34s user 0.50s system 20% cpu 4.076 total
+```
+
+Cheers to Saturday optimizations 🍺
