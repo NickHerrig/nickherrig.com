@@ -31,7 +31,7 @@ Although it's impossible to narrow it down, below are my favorite two adventures
 
 Every blog, YouTube video, and conversation about Hawaii mentioned a helicopter ride. To be honest, I was a little skeptical. I debated the price tag. How could it be worth the money? Helicopter rides run a beefy price tag of around $400-$450 per seat. I humbly admit that I could not have been more wrong. It was worth every penny. We booked our helicopter tour with Blue Hawaiian as we wanted a trust worthly, "door on" experience. *"Door on??"* you might ask. Yes, you read that correctly. For the more adventurous and daring, you can opt for a helicopter ride with no doors. Our tour left from the Lihue airport located on the East side of the island.
 
-{{< figure src="/images/kauai_adventures/helicopter.webp" title="Our Blue Hawaiian Helicopter" >}}
+{{< figure src="/images/kauai_adventures/helicopter.webp" title="Our Blue Hawaiian Helicopter" alt="helicopter">}}
 
 The tour took us up the west coast, first over the port Hawaii where cruise ships make their home. From there we ascended on old sugar cane fields owned by the Robinson family, a prominent land and island owning family. As we looked to our left, Niihau, also known as the Forbidden Island, could be seen in the distance. This island was purchased by the Robinson family in 1864 for 10,000 gold and a grand piano. In today's dollars, that's only $300,000; not a bad deal for an island. Another interesting fact about the island, is that only natives are allowed: no tourists (hence the name forbidden).
 
@@ -74,6 +74,6 @@ Okay, I lied. I wasn't able to narrow it down to just two of my favorites. Here 
 - A visit to Spouting Horn
 - Relaxing by the pool / hot tub
 
-{{< figure src="/images/kauai_adventures/turtles.jpg" title="Turtles Resting on Poipu Beach" >}}
+{{< figure src="/images/kauai_adventures/turtles.webp" title="Turtles Resting on Poipu Beach" >}}
 
 Until next time Hawaii! Mahalo! 🤙
