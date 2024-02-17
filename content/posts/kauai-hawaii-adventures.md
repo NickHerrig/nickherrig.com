@@ -35,15 +35,15 @@ Every blog, YouTube video, and conversation about Hawaii mentioned a helicopter 
 
 The tour took us up the west coast, first over the port Hawaii where cruise ships make their home. From there we ascended on old sugar cane fields owned by the Robinson family, a prominent land and island owning family. As we looked to our left, Niihau, also known as the Forbidden Island, could be seen in the distance. This island was purchased by the Robinson family in 1864 for 10,000 gold and a grand piano. In today's dollars, that's only $300,000; not a bad deal for an island. Another interesting fact about the island, is that only natives are allowed: no tourists (hence the name forbidden).
 
-{{< figure src="/images/kauai_adventures/west_coast.webp" title="Mountains and Fields in West Kauai" >}}
+{{< figure src="/images/kauai_adventures/west_coast.webp" title="Mountains and Fields in West Kauai" alt="west kauai" >}}
 
 From there, we headed towards Waimea Canyon. At this point, my jaw dropped and remained dropped for the duration of the flight. The advantage of a helicopter is that you get an up close and personal view flying through the canyon. Waterfalls, lush green, and bright red iron soil engulfed the aircraft.
 
-{{< figure src="/images/kauai_adventures/waimea_heli.webp" title="Flying Past Waimea Waterfalls" >}}
+{{< figure src="/images/kauai_adventures/waimea_heli.webp" title="Flying Past Waimea Waterfalls" alt="waimea helicopter" >}}
 
 I questioned how it could get better than this. At that moment we headed out of the Canyon and in the direction of the infamous Napali Coast. It was humbling, inspiring, and breathtaking. Something about a landscape being formed and molded over millions of years puts your own existence into perspective.
 
-{{< figure src="/images/kauai_adventures/napali_heli.webp" title="The Beautiful Napali Coast" >}}
+{{< figure src="/images/kauai_adventures/napali_heli.webp" title="The Beautiful Napali Coast" alt="napali helicopter" >}}
 
 From here, we headed back to the airport. The ride was about 50 minutes total. If you get a chance to visit Kauai, do not leave this adventure off of your list.
 
@@ -51,11 +51,11 @@ From here, we headed back to the airport. The ride was about 50 minutes total. I
 
 After seeing the Napali Coast from the air, we opted for a closer look at the coast line via a boat ride and snorkling adventure. There are a few great companies to choose from, but we ended up hanging out with Captain J's. The trip started with an early sighting of a pod of more than 20 bottlenose dolphins. The Captain said this was rare to see so many feeding at the same time so we were grateful to have stumbled upon them. While we ventured on, we made our way up west side of Kauai towards the Napali coastline. We were quickly greeted by impressive cave formations.
 
-{{< figure src="/images/kauai_adventures/caves.webp" title="Napali Coast Caves" >}}
+{{< figure src="/images/kauai_adventures/caves.webp" title="Napali Coast Caves" alt="caves" >}}
 
 The coastline is hard to put into words without seeing it yourself. It's a 17 mile stretch of volcanic rocks, stunning cliffs, and lush greenery. It's inaccesible by road, however, but can be accessed by the Kalalau Trail. Sadly, due to weather, we weren't able to do this trail. The river was too high due to higher than normal rainfall during our stay. The boat ride allowed us to get a different, less exhausting view.
 
-{{< figure src="/images/kauai_adventures/napali_boat.webp" title="Boat Views of the Napali Coast" >}}
+{{< figure src="/images/kauai_adventures/napali_boat.webp" title="Boat Views of the Napali Coast" alt="napali coast">}}
 
 On our way to the snorkling spot, we had another encounter with wildlife. This time, we spotted a group of humpback whales. The whales were showing their tails and fins, most likely in an attempt to impress the larger female of the group. It was a magical moment seeing these large creatures. We finally made our way to our snorkling spot. Although Hawaii isn't known for coral reefs, the rock formations were filled with bright colored fish including a red spotted octopus that Megan spotted in the water.
 
@@ -74,6 +74,6 @@ Okay, I lied. I wasn't able to narrow it down to just two of my favorites. Here 
 - A visit to Spouting Horn
 - Relaxing by the pool / hot tub
 
-{{< figure src="/images/kauai_adventures/turtles.webp" title="Turtles Resting on Poipu Beach" >}}
+{{< figure src="/images/kauai_adventures/turtles.webp" title="Turtles Resting on Poipu Beach" alt="turtle" >}}
 
 Until next time Hawaii! Mahalo! 🤙
