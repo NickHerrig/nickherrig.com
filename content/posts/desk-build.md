@@ -68,31 +68,32 @@ I followed the following loose steps:
 
 - Get the butcher block into  the correct possition. This meant aligning the desk upside down and inverted from it's final location. This step was pretty important as the desk is pretty heavy, especially after mounting the frame.
 
-![butcher-block](/images/desk/butcher_block.jpg)
-![butcher-layout](/images/desk/butcher_layout.jpg)
+{{< figure src="/images/desk/butcher_block.webp" alt="butcher block" >}}
+{{< figure src="/images/desk/butcher_layout.webp" alt="butcher block layout" >}}
 
 - The next step was positioning the standing desk frame on top of the desk. There was some eyeballing on the best place for the extension leg, but I used a tape measure to ensure it was aligned in the center.
 
-![frame-layout](/images/desk/frame_layout.jpg)
+{{< figure src="/images/desk/frame_layout.webp" alt="frame layout" >}}
+
 
 - After the frame was in place, it was time to drill some pilot holes. I used a 1/8" drill bit for this job. A pro tip was to plug in all the electronic components prior to drilling pilot holes to ensure the cabeling could reach prior to mounting.
 
-![drill-bits](/images/desk/drill_bits.jpg)
+{{< figure src="/images/desk/drill_bits.webp" alt="drill bits" >}}
 
 - With the pilot holes drilled, it was time to screw in the frame and the electronic components into the desk. This step also included mounting the silver brace plates where the two pieces of butcher block meet for extra support.
 
-![mount-desk](/images/desk/mount_desk.jpg)
+{{< figure src="/images/desk/mount_desk.webp" alt="mounting desk" >}}
 
 - Flipping the desk over and into position was by far the hardest part. For a desk this size it required a minimum of two people. Luckily my wifey Megan came in clutch here!
 
-![flipped-desk](/images/desk/flipped_desk.jpg)
+{{< figure src="/images/desk/flipped_desk.webp" alt="flipped desk" >}}
 
 - Staining and finishing the desk came next. I only applied one coat of stain and one coat of finish with a few hours in-between for the stain to dry. Note to self: crack a window next time to avoid your room smelling like chemicals. For future builds, staining and finishing might be the first step of the build but I was happy with this method. Side note: I did not stain and finish the bottom of the desk out of laziness (but let's keep that between us).
 
-![stained-desk](/images/desk/stained_desk.jpg)
+{{< figure src="/images/desk/stained_desk.webp" alt="stained desk" >}}
 
 ## The Final Product
 
 Now to be honest, I'm currently traveling at 522 mph, 32,000 feet over the Pacific Ocean on a flight to Kauai, Hawaii while writing this. So with that said, I've yet to actually utilize the desk... I haven't setup my monitors, networking gear, or my computer vision hardware. With that being said, while sitting at the desk, I couldn't help but feel proud of how the project turned out. The material looks and feels great. The standing desk functionality works perfectly. There is also more space than I know what to do with (although ask me in a month if this is still the case). Cheers to building new things!
 
-![final-product](/images/desk/final.jpg)
+{{< figure src="/images/desk/final.webp" alt="final desk" >}}
