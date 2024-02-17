@@ -163,11 +163,11 @@ We can double check our output against the [UTF-8 character table](https://www.u
 Last Valentine's Day, my lovely fiance Megan wrote me an AWESOME card. 
 The front had a digital heart on it and displayed Megan's art skillz.
 
-![letter](/images/love-letter.jpg)
+![letter](/images/binary/love-letter.webp)
 
 I was impressed when I saw it, but soon realized that there was a hidden message lurking on the inside.
 
-![contents](/images/love-letter-content.jpg)
+![contents](/images/binary/love-letter-content.webp)
 
 It appeared to be _all ones and zeroes_! I assumed that this letter was written in the binary number system! 
 Let's take a look at the message, and attempt to decode it using python!
