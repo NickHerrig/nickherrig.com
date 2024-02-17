@@ -106,11 +106,11 @@ At the time of writing this document Supervision supports 15 different annotatio
 
 Each annoator has the ability to be stacked; however one interesting finding is that the order may influence the quality of the output. For example, if you were to annotate a bounding box, then stack a pixelated annoation, the bounding box may be pixelated as seen in the image below.
 
-![blurred-bounding](/images/supervision/blur-bounding-box.jpg)
+![blurred-bounding](/images/supervision/blur-bounding-box.webp)
 
 You can solve this problem by instead adding the pixelated annotation first, then the bounding box annotation.
 
-![fixed-blurred-bounding](/images/supervision/fixed-blur-bounding-box.jpg)
+![fixed-blurred-bounding](/images/supervision/fixed-blur-bounding-box.webp)
 
 Let's dive into the code for creating these annotations.
 
@@ -159,7 +159,7 @@ We've introduced a couple of helpful utilities. The `VideoInfo` object helps us 
 
 Some annotations require specific model output that depend on the data returned at inference time. More specifically, the Halo, Mask, and Polygon all use `sv.Detections.mask` under the hood to generate the annotations. This means that we need to use a segmentation model, instead of our object detection model to use these annoations. Let's swap out our model `yolov8x-640` for `yolov8x-seg-640` to ensure we recieve a mask property in our detection ojects. Take a look at an example of the Polygon Annotator.
 
-![polygon-annotator](/images/supervision/poly.jpg)
+![polygon-annotator](/images/supervision/poly.webp)
 
 ```python {hl_lines=[7,8]}
 import supervision as sv
@@ -178,7 +178,7 @@ if __name__ == '__main__':
 
 The Trace annotator requires the `sv.Detections.tracker_id` be present to generate annotations. This means that we'll have to use a tracker. Trackers are a piece of code that identifies objects across frames and assigns them a unique id. For example, we could use a tracker to learn what direction a vehicle is moving. There are a few popular trackers at the time of writing this including [ByteTrack](https://github.com/ifzhang/ByteTrack) and [Bot-SORT](https://github.com/NirAharon/BoT-SORT). Supervision makes using trackers a breeze and comes with ByteTrack built-in.
 
-![track-id-trace](/images/supervision/track-id-trace.jpg)
+![track-id-trace](/images/supervision/track-id-trace.webp)
 
 Let's dive into some tracking code!
 
@@ -239,7 +239,7 @@ In this code, we add `text_scale` as a new dynamic value for labeling the `track
 
 When trying to stack a Trace annotation with a Polygon annotation, I ran into a hiccup. When using a detections from `ByteTrack.update_with_detections(detections)` the resulting `sv.Detections` does not include segmentation masks 😭. This isn't a show stopper, but there is a little bit of nuance if we'd like to stack a Segmentation Annotator with a Trace Annotator.
 
-![trace-seg](/images/supervision/trace-seg.jpg)
+![trace-seg](/images/supervision/trace-seg.webp)
 
 We need to apply the polygon annotation with the `sv.Detections.from_inference()` instead of the detections from `ByteTrack.update_with_detections(detections)`. The former contains the mask and the latter doesn't include the mask. This looks to be a [bug](https://github.com/roboflow/supervision/issues/418), as the latter does include a `mask` property, it just returns `None`. More to come on this.
 
