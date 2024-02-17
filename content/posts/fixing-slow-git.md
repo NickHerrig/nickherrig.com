@@ -104,5 +104,45 @@ du -sh *
 Going from 74M to 4.1M with literally zero implication to noticable image quality is pretty great!
 
 Let's take a look now at how long it takes to do a git pull. 
+```shell
+Cloning into 'nickherrig.com'...
+remote: Enumerating objects: 720, done.
+remote: Counting objects: 100% (213/213), done.
+remote: Compressing objects: 100% (145/145), done.
+remote: Total 720 (delta 60), reused 202 (delta 54), pack-reused 507
+Receiving objects: 100% (720/720), 97.09 MiB | 9.78 MiB/s, done.
+Resolving deltas: 100% (263/263), done.
+git clone git@github.com:NickHerrig/nickherrig.com.git  1.29s user 2.23s system 29% cpu 11.739 total
+```
 
-#TODO
+Shit, it appears we went backwares here from 8.5 seconds to 11.8 seconds. I'm assuming this is because git stores a history of changes to the repo, so all we really did here was add a bunch of smaller images to the repository. Enter git LFS.
+
+## Git LFS
+
+Git Large File Storage(LFS) is a tool that helps keep your repository light by storing large files separately from your main git repo. Here is a direct quote from the documentation on how it works. 
+
+> Git LFS handles large files by storing references to the file in the repository, but not the actual file itself. To work around Git's architecture, Git LFS creates a pointer file which acts as a reference to the actual file (which is stored somewhere else). GitHub manages this pointer file in your repository. When you clone the repository down, GitHub uses the pointer file as a map to go and find the large file for you.
+
+In order to get this working for my GitHub Pages hosting, it appears that with [this GitHub Discussion](https://github.com/orgs/community/discussions/50337) all you need to do is add a little configuration to your github actions.
+
+```hugo.yaml
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+```
+
+At this point, I made sure to initialize git LFS and track specific file types. 
+
+```shell
+git lfs install
+
+git lfs track "*.jpg"
+git lfs track "*.jpeg"
+git lfs track "*.png"
+git lfs track "*.webp"
+git lfs track "*.mp4"
+git lfs track "*.mp3"
+
+```
+
