@@ -6,7 +6,7 @@ description: "Improving my gaming speed/latency with powerline internet."
 tags: [gaming, technology, networking]
 ShowToc: true
 TocOpen: false
-draft: False 
+draft: false 
 ---
 
 Some of you that read my blogs know that I'm a pretty big fan of Rocket League. For those of you that aren't aware of this game, please allow me to change your life. The best way to describe Rocket League is that it's half soccer half demolition durby. You play as a flying car, and do your best to kick a soccer ball into your opponents net. For those who still aren't really getting what Rocket League is, look at this epic goal below.
@@ -14,7 +14,7 @@ Some of you that read my blogs know that I'm a pretty big fan of Rocket League. 
 {{< figure src="/images/powerline/rocket-league.gif" alt="gif of rocket league">}}
 
  The only way I play the game is competitevly via 1v1, 2v2, or 3v3 game play. Now just because I only play competitvely doesn't mean I play well, but I digress. The last few times I've played the game, there was some pretty narly lag. This lag made competitve game play pretty frusturating. It was happening across multiple weeks, so I was fairly certain it had to do with my own internet connection. Part of me wondered if it was due to the placement of my wifi access point, or the fact that I was gaming over a wifi connection to begin with. Some of you might ask
- 
+
  > "Why not just run ethernet to the PS5 and call it good". - Some of you
 
 This is a great idea and my initial thought! The problem though is that I live in a 3 story town home, of which my main networking gear comes in on the first floor, and my ps5 sits in the basement. I also rent, which means that I wasn't about to drill holes in the walls/floors to run ethernet to the basement.
@@ -30,7 +30,7 @@ I was feeling a bit hopeless, when I happened to be listening to [this episode](
 
 {{< figure src="/images/powerline/powerline_internet.png" alt="diagram of powerline setup.">}}
 
-After learning about this, I purchased a pair of [tplink powerline adapters](https://www.amazon.com/Powerline-Ethernet-Adapter-Extender-TP-Link/dp/B084CZMYNM?th=1) and got them all hooked up! Below are some speed test results. 
+After learning about this, I purchased a pair of [tplink powerline adapters](https://www.amazon.com/Powerline-Ethernet-Adapter-Extender-TP-Link/dp/B084CZMYNM?th=1) and got them all hooked up! Below are some speed test results.
 
 ## PS5 Internet Testing Results
 
@@ -45,7 +45,7 @@ The numbers are pretty simple, but still gave some valuable insight.
 So both my upload and download speeds were better on the ps5. Pretty cool.
 
 I then thought it'd be cool to run a test through cloudflare's speed test web page.
-It was a little challenging finding a way to access a browser on the ps5, but it's possible if you got to "Settings" > "Users and Accounts" > "Link Account" > "Youtube". From youtube, you can make your way to the google search bar to get to https://speed.cloudflare.com/. 
+It was a little challenging finding a way to access a browser on the ps5, but it's possible if you got to "Settings" > "Users and Accounts" > "Link Account" > "Youtube". From youtube, you can make your way to the google search bar to get to https://speed.cloudflare.com/.
 
 ## Cloud Flare Speed Test Results
 
