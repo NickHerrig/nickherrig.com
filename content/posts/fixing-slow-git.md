@@ -29,7 +29,7 @@ Resolving deltas: 100% (226/226), done.
 git clone git@github.com:NickHerrig/nickherrig.com.git  1.08s user 1.94s system 35% cpu 8.524 total
 ```
 
-I had an gut feel it was related to the images that I'm storing in the repo, but I wanted to make sure.
+I had a gut feel it was related to the images that I'm storing in the repo, but I wanted to make sure.
 To find out I ran a `du -sh *` to try and find the largest directory.
 
 ```shell
@@ -45,15 +45,15 @@ du -sh *
 ```
 
 From here I noticed that my static directory was 74M. Gut feel confirmed. This is where I store all my blog images.
-A little more digging showed that I was storing 26M of images from my most recent blog post [Kauai Hawaii - Part One: Adventures](https://nickherrig.com/posts/kauai-hawaii-adventures/). As I look forward to writing more blog posts with image content, I realized this doesn't really scale well with the usibility of my git repo. I started doing a little research and decided to tackle this problem in two ways.
+A little more digging showed that I was storing 26M of images from my most recent blog post [Kauai Hawaii - Part One: Adventures](https://nickherrig.com/posts/kauai-hawaii-adventures/). As I look forward to writing more blog posts with image content, I realized this doesn't really scale well with the usability of my git repo. I started doing a little research and decided to tackle this problem in two ways.
 
 ## Image Resizing and Formating
 
-When I realized my images were pretty large, I wanted to confirm this with another form of analysis. I reached for a popular tool called [PageSpeed Insights](https://pagespeed.web.dev/). You can use this tool to run an alysis on specific pages of a website to get an repot on performance issues.
+When I realized my images were pretty large, I wanted to confirm this with another form of analysis. I reached for a popular tool called [PageSpeed Insights](https://pagespeed.web.dev/). You can use this tool to run an analysis on specific pages of a website to get a report on performance issues.
 
 {{< figure src="/images/pagespeed_results.png" title="pagespeed results for kauai adventures blog" >}}
 
-One call out was to utilize next-gen formats like webp. another call out was to properly size the images. I decided to write a quick shell script to change the form of my images fro jpg to webp and reduce the quality.
+One call out was to utilize next-gen formats like webp. Another call out was to properly size the images. I decided to write a quick shell script to change the form of my images fro jpg to webp and reduce the quality.
 
 ```shell
 for img in *.jpg; do
@@ -61,7 +61,7 @@ for img in *.jpg; do
 done
 ```
 
-With that, we're down to 11M from 26M! Not bad! Next, I wanted to resize the images. In order to do this, I needed to first identify the current size of the images, then figure out what the Computed values were on the website. To run this example, let's look at the Caves image.
+With that, we're down to 11M from 26M! Not bad! Next, I wanted to resize the images. In order to do this, I needed to first identify the current size of the images, then figure out what the computed values were on the website. To run this example, let's look at the caves image.
 
 ```shell
 identify -format "%wx%h\n" caves.webp     
@@ -115,11 +115,11 @@ Resolving deltas: 100% (263/263), done.
 git clone git@github.com:NickHerrig/nickherrig.com.git  1.29s user 2.23s system 29% cpu 11.739 total
 ```
 
-Shit, it appears we went backwares here from 8.5 seconds to 11.8 seconds. I'm assuming this is because git stores a history of changes to the repo, so all we really did here was add a bunch of smaller images to the repository. Enter git LFS.
+Shit, it appears we went backwards here from 8.5 seconds to 11.8 seconds. I'm assuming this is because git stores a history of changes to the repo, so all we really did here was add a bunch of smaller images to the repository. Enter git LFS.
 
 ## Git LFS
 
-Git Large File Storage(LFS) is a tool that helps keep your repository light by storing large files separately from your main git repo. Here is a direct quote from the documentation on how it works. 
+Git Large File Storage (LFS) is a tool that helps keep your repository light by storing large files separately from your main git repo. Here is a direct quote from the documentation on how it works. 
 
 > Git LFS handles large files by storing references to the file in the repository, but not the actual file itself. To work around Git's architecture, Git LFS creates a pointer file which acts as a reference to the actual file (which is stored somewhere else). GitHub manages this pointer file in your repository. When you clone the repository down, GitHub uses the pointer file as a map to go and find the large file for you.
 
@@ -168,4 +168,4 @@ Filtering content: 100% (36/36), 3.08 MiB | 1.85 MiB/s, done.
 git clone git@github.com:NickHerrig/nickherrig.com.git  0.34s user 0.50s system 20% cpu 4.076 total
 ```
 
-Cheers to Saturday optimizations 🍺
+Cheers to Saturday optimizations! 🍺
