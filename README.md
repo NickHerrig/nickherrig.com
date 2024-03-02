@@ -4,6 +4,14 @@ This is the source code for my personal blog and website [nickherrig.com](https:
 
 ## Installation
 
+### Clone The Repository
+
+`git clone git@github.com:NickHerrig/nickherrig.com.git`
+
+### Install Git LFS
+
+This repository deppends on git lfs for storing image data. Install git lfs by [visiting the documentation](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage) or running `brew install git-lfs` on a macbook.
+
 ### Install Hugo
 
 This project relies on [Hugo](https://gohugo.io/) to build and serve the website.
