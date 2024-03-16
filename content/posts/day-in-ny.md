@@ -6,10 +6,10 @@ description: "A day exploring New York City."
 tags: [travel, food, adventure]
 ShowToc: true
 TocOpen: false
-draft: true 
+draft: false
 ---
 
-Traveling is one of my favorite hobbies. It's an entry point to experiencing other hobbies of mine, including trying new restaurants, enjoying entertainment, and sight seeing. It's also a chance to learn how to explore and operate in a new city. A few weeks ago I visited New York City for the first time. I was starting a new job and onboarding took place in the heart of Manhattan. After the week of onboarding I had a full day to experience a sliver of what downtown New York had to offer.
+Traveling is one of my favorite hobbies. It's an entry point to experiencing other interests of mine, including trying new restaurants, enjoying entertainment, and sight seeing. It's also a chance to learn how to explore and operate in a new city. A few weeks ago I visited New York City for the first time. I was starting a new job and onboarding took place in the heart of Manhattan. After the week of onboarding I had a full day to experience a sliver of what downtown New York had to offer.
 
 ## Game Plan over Brunch
 
@@ -33,7 +33,7 @@ Prior to traveling to New York, I always thought that Apple Maps was the premier
 
 ## The Empire State Building
 
-After finishing brunch and mapping out my sight seeing game plan, I walked the 10 minutes to my first stop. The Empire State Building stood tall and mighty before me. I decided to purchase the 102nd observation deck ticket, but in all honestly the 86th floor was equally as impressive. Standing on the NYC streets, it's hard to grok how large the concrete jungle is; but from the 102nd floor it's hard to ignore the impressive creation. If you squint, you can see The Statue of Liberty in the top right corner.
+After finishing brunch and mapping out my sight seeing game plan, I walked the 10 minutes to my first stop. The Empire State Building stood tall and mighty before me. I decided to purchase the 102nd observation deck ticket, but in all honestly the 86th floor was equally as impressive. Standing on the NYC streets, it's hard to grok how large the concrete jungle is; but from the 102nd floor it was impossible to ignore the impressive creation. If you squint just right, you can see The Statue of Liberty in the top right corner.
 
 {{< figure src="/images/day_in_ny/empire-state-view.webp" title="102nd floor of The Empire State Building" alt="Empire State Building View">}}
 
@@ -51,18 +51,26 @@ After paying my respects, and pondering the events of 911, it was time to move t
 
 ## The Statue of Liberty
 
-Moving further south, my next stop was The Statue of Liberty. I decided to save an up close look for a future day, but the view from the lookout was incredible. I pondered that my grandparents parents both saw this Statue when the emigrated from Poland and Germany to find a better life in America for their families. What a sight to come across
+Moving further south, my next stop was The Statue of Liberty. I decided to save an up close look for a future day, but the view from the lookout was incredible. I reflected on what it must have been like to see the statue whilst coming to the United States through Ellis Island to stat a new life. There are many tours that you can take to get an up close look, including the free Staten Island Ferry and runs every 15 minutes during rush hour. 
 
 {{< figure src="/images/day_in_ny/liberty.webp" title="The Statue of Liberty" alt="Statue of Liberty">}}
 
 ## Wall Street
 
-## Liberty Street Bagels
+Wall Street was a quick walk from the Statue of Liberty and I had a goal of seeing the Charging Bull. Sometimes referred to as the Bull of Wall Street it stand proud at over 7000 lbs and is made entirely of bronze. The statue was created by Arturo Di Modica around the 1987 Black Monday stock market crash, and was originally placed outside of the NY Stock Exchange illegally. Thousands of people visit the sculpture every day.
 
-## Times Square
+{{< figure src="/images/day_in_ny/bull.webp" title="The Charging Bull" alt="Charging Bull">}}
 
-### Broadway
+## Times Square and Broadway
 
-## Bonus... Don't sit there
+I decided to head back to the hotel to rest and regroup, as my next stop was Time Square to see a show on Broadway. I didn't realize that Broadway had dozens of shows to choose from, so this alone was a difficult task. After a tough decision, I thought it would be incredible to see Hamilton, by Lin Manuel on Broadway at the Richard Rogers Theatre. It was amazing.
+
+{{< figure src="/images/day_in_ny/broadway.webp" title="Broadway" alt="Broadway">}}
+
+## New York
+
+New York was an impressive and entertaining place to explore. I know I only scratched the surface of the restaurants, entertainment, and sightseeing that NY has to offer. I'm looking forward to continue exploring on my next visit. Until Next time NY!
+
+### Bonus... Don't sit here
 
 {{< figure src="/images/day_in_ny/bonus.webp" alt="fire hydrant boobie trap" >}}
