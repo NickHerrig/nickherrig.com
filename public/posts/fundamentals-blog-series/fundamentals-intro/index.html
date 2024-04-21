@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>The Fundamentals - Introduction | Nick Herrig</title>
+<meta name="keywords" content="fundamentals">
+<meta name="description" content="This post introduces the fundamentals blog series.">
+<meta name="author" content="Me">
+<link rel="canonical" href="http://localhost:1313/posts/fundamentals-blog-series/fundamentals-intro/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/fundamentals-blog-series/fundamentals-intro/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Nick Herrig (Alt + H)">Nick Herrig</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/archives" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://resume.nickherrig.com" title="Resume">
+                    <span>Resume</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      The Fundamentals - Introduction
+    </h1>
+    <div class="post-description">
+      This post introduces the fundamentals blog series.
+    </div>
+    <div class="post-meta"><span title='2020-02-24 00:00:00 +0000 UTC'>February 24, 2020</span>&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href="https://github.com/NickHerrig/nickherrig.com/tree/master/content/posts/fundamentals-blog-series/fundamentals-intro.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#the-fundamentals-blog-series" aria-label="The Fundamentals Blog Series">The Fundamentals Blog Series</a></li>
+                <li>
+                    <a href="#audience" aria-label="Audience">Audience</a></li>
+                <li>
+                    <a href="#the-goals-of-series" aria-label="The Goals of Series">The Goals of Series</a><ul>
+                        
+                <li>
+                    <a href="#motivate-non-traditional-developers-to-break-into-the-technology-industry" aria-label="Motivate non-traditional developers to break into the technology industry">Motivate non-traditional developers to break into the technology industry</a></li>
+                <li>
+                    <a href="#have-a-conversation-about-technology-concepts-in-a-non-intimidating-fashion" aria-label="Have a conversation about technology concepts in a non-intimidating fashion">Have a conversation about technology concepts in a non-intimidating fashion</a></li></ul>
+                </li>
+                <li>
+                    <a href="#what-to-expect" aria-label="What to Expect">What to Expect</a><ul>
+                        <ul>
+                        
+                <li>
+                    <a href="#each-blog-will-be-no-more-than-30-minutes" aria-label="Each blog will be no more than 30 minutes.">Each blog will be no more than 30 minutes.</a></li>
+                <li>
+                    <a href="#testing-your-understanding" aria-label="Testing your Understanding">Testing your Understanding</a></li>
+                <li>
+                    <a href="#no-coding-experience-needed-but" aria-label="No coding experience needed, but&hellip;.">No coding experience needed, but&hellip;.</a></li></ul>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#lets-do-this" aria-label="Let&rsquo;s do this!">Let&rsquo;s do this!</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>A few weeks ago a friends partner reached out wanting some advice on learning to program and getting a job in the technology industry.</p>
+<blockquote>
+<p>&ldquo;I&rsquo;m currently a high school teacher (band director) and am looking to make the change to web development in the next year.&rdquo;</p>
+</blockquote>
+<p>He was really excited about starting his career shift from a band director at the local high school to a hacker and software engineer.
+The problem though, was that he didn&rsquo;t really know where to start.<br>
+He wanted to pick my brain about two things I&rsquo;ve recently gone though.</p>
+<ul>
+<li>How does one make a shift from a non technology job to software engineering?</li>
+<li>Where should I start?</li>
+</ul>
+<p>When I first saw this email, I honestly had no clue how to respond.
+Sure, I recently transitioned from a career in manufacturing engineering to software engineering and developer.
+I was now automating distributed systems with <a href="https://en.wikipedia.org/wiki/Ansible_%28software%29">ansible</a> , using time series data to monitor systems with <a href="https://en.wikipedia.org/wiki/Prometheus_%28software%29">prometheus</a>, and writing self service tools in <a href="https://en.wikipedia.org/wiki/Python_%28programming_language%29">python</a> with the <a href="https://en.wikipedia.org/wiki/Flask_%28web_framework%29">flask web framework</a>.
+I didn&rsquo;t really have a game plan at the time though.
+My game plan looked like giving it a try, and seeing how it worked out.
+Luckily for myself, I had a lot of time to learn, and some great mentors to help me.
+But that didn&rsquo;t help the high school band teacher&hellip;
+I thought about his situation for the next few weeks and tried to answer the questions:</p>
+<ul>
+<li>What would I do differently if I was making a career shift to the technology industry?</li>
+<li>Where would I start?</li>
+</ul>
+<h2 id="the-fundamentals-blog-series">The Fundamentals Blog Series<a hidden class="anchor" aria-hidden="true" href="#the-fundamentals-blog-series">#</a></h2>
+<p>The fundamentals blog series is my answer to the above two questions.
+It&rsquo;s my attempt to answer the high school band teachers questions about making the shift from non technical work to technical work.
+The fundamentals is a blog series about computer and technology concepts explained in a digestible and non convoluted format.
+The blog series is meant to be approachable, humble, and non assuming.
+We will cover a variety of software engineering and computer science concepts, have a chat about them, and test our understanding together with examples.</p>
+<h2 id="audience">Audience<a hidden class="anchor" aria-hidden="true" href="#audience">#</a></h2>
+<p>I&rsquo;m writing this blog series for a few different people I&rsquo;ve met over the years.</p>
+<ul>
+<li>The high school band teacher looking to make a career shift.</li>
+<li>The 4 year college graduate, wanting a refresher on the fundamentals.</li>
+<li>The person who thinks computers are too complicated to learn about.</li>
+</ul>
+<p>The blog series is also for folks just looking to better understand the world around us.
+It is my hope that more and more people realize that technology is just another language like English or Spanish.
+Technology and software engineering <strong>should not</strong> be seen as intimidating.
+They should be viewed as an exciting tool set in which you can build a new future!
+you betcha,  it takes practice, but think of all the cool stuff we get to build together to make the world a better place!</p>
+<h2 id="the-goals-of-series">The Goals of Series<a hidden class="anchor" aria-hidden="true" href="#the-goals-of-series">#</a></h2>
+<p>I have two major goals for the fundamentals blog series.</p>
+<h3 id="motivate-non-traditional-developers-to-break-into-the-technology-industry">Motivate non-traditional developers to break into the technology industry<a hidden class="anchor" aria-hidden="true" href="#motivate-non-traditional-developers-to-break-into-the-technology-industry">#</a></h3>
+<p>You may have heard via social media, in the news, or from your grandma that many companies including <a href="https://www.cnbc.com/2018/08/16/15-companies-that-no-longer-require-employees-to-have-a-college-degree.html?__source=facebook%7Cmain">Google and Apple have ditched the college degree requirements</a>.
+This is pretty freaking exciting if you ask me&hellip;
+This means you don&rsquo;t have to get into crazy student loan <a href="https://www.fool.com/student-loans/student-loan-debt-statistics/">debt</a> to have a really awesome career in tech.
+Demand is high, and it&rsquo;s your brain they are demanding!
+Read a few programming books, this blog series(shameless plug), and take a coding boot camp.
+You&rsquo;ll be well on your way to working in the industry!
+My plea to you is that you are passionate and devote yourself to learning and the process of learning.
+Use this blog as one of your many resources!</p>
+<h3 id="have-a-conversation-about-technology-concepts-in-a-non-intimidating-fashion">Have a conversation about technology concepts in a non-intimidating fashion<a hidden class="anchor" aria-hidden="true" href="#have-a-conversation-about-technology-concepts-in-a-non-intimidating-fashion">#</a></h3>
+<p>The blog series was designed to be a conversation between two people about bite sized computer science topics.
+Imagine that we are grabbing coffee, and while we are slamming that iced americano, or cappuccino we discussed bit shifting and why it&rsquo;s important.
+I also want to have conversations about why things turned out the way they are Today, commonly known as <strong>history</strong>.
+While looking at history i&rsquo;d like you to question the way the world works Today, and think how it could be better Tomorrow.
+The goal is for the series to be a learning path and to break down the barriers for other folks to join the party.
+Any yes, it is a freaking party.
+Let&rsquo;s Party!</p>
+<h2 id="what-to-expect">What to Expect<a hidden class="anchor" aria-hidden="true" href="#what-to-expect">#</a></h2>
+<p>Before you join me on this journey, lets chat expectations.</p>
+<h4 id="each-blog-will-be-no-more-than-30-minutes">Each blog will be no more than 30 minutes.<a hidden class="anchor" aria-hidden="true" href="#each-blog-will-be-no-more-than-30-minutes">#</a></h4>
+<p>We are all busy, I get it&hellip; so i&rsquo;ll keep the concepts contained.
+The content will be  short, sweet, and concise.
+Expect to need around 30 minutes to read the blog post and test your understanding.</p>
+<h4 id="testing-your-understanding">Testing your Understanding<a hidden class="anchor" aria-hidden="true" href="#testing-your-understanding">#</a></h4>
+<p>Each blog will have an exercise to test your understanding of the main topic.
+Solutions will be on a separate, slightly hidden page, so try your best to answer the questions before peaking.
+Testing your understanding is pretty important for these posts, so give it a try!</p>
+<h4 id="no-coding-experience-needed-but">No coding experience needed, but&hellip;.<a hidden class="anchor" aria-hidden="true" href="#no-coding-experience-needed-but">#</a></h4>
+<p>Although coding isn&rsquo;t a prerequisite, we will be reading some code.
+The plan is to use a easy to read/use programming language to test understanding.
+I&rsquo;m taking <a href="http://www.paulgraham.com/pfaq.html">Paul Graham&rsquo;s advice</a> here:</p>
+<blockquote>
+<p><strong>How can I learn to program?</strong> <br>
+Find a friend who knows how to program. Get them to set you up with a system where you can edit and run programs. Use whatever language they suggest for a beginner (probably it will be Python or Ruby).</p>
+</blockquote>
+<p>We will be using mosty <a href="https://www.python.org/">python3</a> on this journey, but I&rsquo;m also interested in bringing <a href="https://golang.org/">go</a> and <a href="https://www.ruby-lang.org/en/">ruby</a> into the mix.
+Are you ready for this?</p>
+<h2 id="lets-do-this"><a href="">Let&rsquo;s do this!</a><a hidden class="anchor" aria-hidden="true" href="#lets-do-this">#</a></h2>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/fundamentals/">Fundamentals</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="http://localhost:1313/">Nick Herrig</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

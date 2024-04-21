@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Streaming LLM Requests with Python | Nick Herrig</title>
+<meta name="keywords" content="llm, python, api">
+<meta name="description" content="Streaming ollama llm api request using Python.">
+<meta name="author" content="Me">
+<link rel="canonical" href="http://localhost:1313/posts/streaming-requests/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/streaming-requests/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Nick Herrig (Alt + H)">Nick Herrig</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/archives" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://resume.nickherrig.com" title="Resume">
+                    <span>Resume</span>&nbsp;
+                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14L21 3"></path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Streaming LLM Requests with Python
+    </h1>
+    <div class="post-description">
+      Streaming ollama llm api request using Python.
+    </div>
+    <div class="post-meta"><span title='2024-04-14 00:00:00 +0000 UTC'>April 14, 2024</span>&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href="https://github.com/NickHerrig/nickherrig.com/tree/master/content/posts/streaming-requests.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
+
+</div>
+  </header> 
+
+  <div class="post-content"><p>Today I was playing around with an LLM called Mistral 7B by running it locally with <a href="https://github.com/ollama/ollama">Ollama</a>.
+Once installed, Ollama provides a chat interface and an API that you can use and run where ever.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>curl http://localhost:11434/api/generate -d <span style="color:#e6db74">&#39;{
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;model&#34;: &#34;mistral&#34;,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  &#34;prompt&#34;:&#34;tell me a joke?&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">}&#39;</span>
+</span></span></code></pre></div><p>When running this api call, I noticed that responses were streamed back to the client in a way that appears to be token by token. Take a look at running the command.</p>
+<figure>
+    <img loading="lazy" src="/images/streaming_llm_python/streamed_response.gif"
+         alt="streaming api endpoint"/> <figcaption>
+            Streaming API Endpoint
+        </figcaption>
+</figure>
+
+<p>This got me thinking a little bit about how this would work with the <a href="https://requests.readthedocs.io/en/latest/">Python requests library</a>.
+I wrote the code I usually would to interact with a post request as seen below, wondering if this would workout.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> requests
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://localhost:11434/api/generate&#39;</span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;model&#34;</span>: <span style="color:#e6db74">&#34;llama3&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;prompt&#34;</span>: <span style="color:#e6db74">&#34;Why is the sky blue?&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>response <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>post(url, json<span style="color:#f92672">=</span>data)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(response<span style="color:#f92672">.</span>json())
+</span></span></code></pre></div><p>Boom 💥, broken. It looks like there are some <code>JSONDecodeErrors</code>. Checkout the error below.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>python3 main.py
+</span></span><span style="display:flex;"><span>Traceback <span style="color:#f92672">(</span>most recent call last<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/Users/nickherrig/git/llms/venv/lib/python3.10/site-packages/requests/models.py&#34;</span>, line 960, in json
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> complexjson.loads<span style="color:#f92672">(</span>self.content.decode<span style="color:#f92672">(</span>encoding<span style="color:#f92672">)</span>, **kwargs<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/Users/nickherrig/.pyenv/versions/3.10.13/lib/python3.10/json/__init__.py&#34;</span>, line 346, in loads
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> _default_decoder.decode<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/Users/nickherrig/.pyenv/versions/3.10.13/lib/python3.10/json/decoder.py&#34;</span>, line 340, in decode
+</span></span><span style="display:flex;"><span>    raise JSONDecodeError<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Extra data&#34;</span>, s, end<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>json.decoder.JSONDecodeError: Extra data: line <span style="color:#ae81ff">2</span> column <span style="color:#ae81ff">1</span> <span style="color:#f92672">(</span>char 92<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>During handling of the above exception, another exception occurred:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Traceback <span style="color:#f92672">(</span>most recent call last<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/Users/nickherrig/git/llms/main.py&#34;</span>, line 11, in &lt;module&gt;
+</span></span><span style="display:flex;"><span>    print<span style="color:#f92672">(</span>response.json<span style="color:#f92672">())</span>
+</span></span><span style="display:flex;"><span>  File <span style="color:#e6db74">&#34;/Users/nickherrig/git/llms/venv/lib/python3.10/site-packages/requests/models.py&#34;</span>, line 968, in json
+</span></span><span style="display:flex;"><span>    raise RequestsJSONDecodeError<span style="color:#f92672">(</span>e.msg, e.doc, e.pos<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>requests.exceptions.JSONDecodeError: Extra data: line <span style="color:#ae81ff">2</span> column <span style="color:#ae81ff">1</span> <span style="color:#f92672">(</span>char 92<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>I did a bit of digging in the requests library documentation, and you can set <code>stream=True</code> in the <code>request.post()</code> portion of the code.
+From there, response has a method <code>iter_lines()</code> which you can loop over as a context window and returns a line of <code>&lt;class 'bytes'&gt;</code>.
+Let&rsquo;s take a look at the updated code.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> requests
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> json
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://localhost:11434/api/generate&#39;</span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;model&#34;</span>: <span style="color:#e6db74">&#34;llama3&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;prompt&#34;</span>: <span style="color:#e6db74">&#34;Tell me a Joke?&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>response <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>post(url, json<span style="color:#f92672">=</span>data, stream<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> line <span style="color:#f92672">in</span> response<span style="color:#f92672">.</span>iter_lines():
+</span></span><span style="display:flex;"><span>    print(type(line))
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> line:
+</span></span><span style="display:flex;"><span>        decoded_line <span style="color:#f92672">=</span> line<span style="color:#f92672">.</span>decode(<span style="color:#e6db74">&#39;utf-8&#39;</span>)
+</span></span><span style="display:flex;"><span>        print(json<span style="color:#f92672">.</span>loads(decoded_line))
+</span></span></code></pre></div><p>In this script, I&rsquo;m simply printing the json response, as it&rsquo;s streamed in. Ideally, I&rsquo;d like to see each word/token streamed to std out as they are recieved.
+This took a little experimenting, but ended up finding two parameters that are part of the <code>print()</code> statement; <code>end</code> and <code>flush</code>.
+By default end is set to a newline character, which makes sense. Since we&rsquo;re going after streaming responses word by word, we&rsquo;ll set this to an empty string <code>&quot;&quot;</code>.
+By default flush is set to <code>False</code> meaning that output is written to the consol under certain conditions, such as when the buffer is full, a newline character is encountered, or the program finishes execution.</p>
+<p>Let&rsquo;s take a look at the updated code.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> requests
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> json
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://localhost:11434/api/generate&#39;</span>
+</span></span><span style="display:flex;"><span>data <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;model&#34;</span>: <span style="color:#e6db74">&#34;llama3&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;prompt&#34;</span>: <span style="color:#e6db74">&#34;write me a story about python.&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>response <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>post(url, json<span style="color:#f92672">=</span>data, stream<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> line <span style="color:#f92672">in</span> response<span style="color:#f92672">.</span>iter_lines():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> line:
+</span></span><span style="display:flex;"><span>        decoded_line <span style="color:#f92672">=</span> line<span style="color:#f92672">.</span>decode(<span style="color:#e6db74">&#39;utf-8&#39;</span>)
+</span></span><span style="display:flex;"><span>        print(json<span style="color:#f92672">.</span>loads(decoded_line)[<span style="color:#e6db74">&#34;response&#34;</span>], end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>, flush<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span></code></pre></div><p>And let&rsquo;s see it in action!</p>
+<figure>
+    <img loading="lazy" src="/images/streaming_llm_python/final.gif"
+         alt="streaming with python"/> <figcaption>
+            Streaming with Python
+        </figcaption>
+</figure>
+
+<p>Happy streaming! 🔥</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/llm/">Llm</a></li>
+      <li><a href="http://localhost:1313/tags/python/">Python</a></li>
+      <li><a href="http://localhost:1313/tags/api/">Api</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="http://localhost:1313/">Nick Herrig</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

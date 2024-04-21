@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nick Herrig</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Nick Herrig</description>
+    <generator>Hugo -- 0.124.1</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 21 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Local Llama3 with Ollama</title>
+      <link>http://localhost:1313/posts/local-llama3/</link>
+      <pubDate>Sun, 21 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/local-llama3/</guid>
+      <description>Running sota meta llama 3 locally with ollama.</description>
+    </item>
+    <item>
+      <title>Streaming LLM Requests with Python</title>
+      <link>http://localhost:1313/posts/streaming-requests/</link>
+      <pubDate>Sun, 14 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/streaming-requests/</guid>
+      <description>Streaming ollama llm api request using Python.</description>
+    </item>
+    <item>
+      <title>Import Images from Databricks to Roboflow</title>
+      <link>http://localhost:1313/posts/roboflow-databricks/</link>
+      <pubDate>Sun, 31 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/roboflow-databricks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>External Redirects with Hugo</title>
+      <link>http://localhost:1313/posts/hugo-external-redirects/</link>
+      <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo-external-redirects/</guid>
+      <description>Configuring external redirects with Hugo.</description>
+    </item>
+    <item>
+      <title>Making Megadesk Smart</title>
+      <link>http://localhost:1313/posts/smart-megadesk/</link>
+      <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/smart-megadesk/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blunt Feedback</title>
+      <link>http://localhost:1313/posts/blunt-feedback/</link>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/blunt-feedback/</guid>
+      <description>A lesson in improving from blunt feedback.</description>
+    </item>
+    <item>
+      <title>A Day in New York</title>
+      <link>http://localhost:1313/posts/day-in-ny/</link>
+      <pubDate>Sun, 03 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/day-in-ny/</guid>
+      <description>A day exploring New York City.</description>
+    </item>
+    <item>
+      <title>Kauai Hawaii - Part Two: Food</title>
+      <link>http://localhost:1313/posts/kauai-hawaii-food/</link>
+      <pubDate>Sun, 25 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kauai-hawaii-food/</guid>
+      <description>Our favorite food in Kauai, Hawaii.</description>
+    </item>
+    <item>
+      <title>Improved Gaming with Powerline</title>
+      <link>http://localhost:1313/posts/improved-gaming-powerline/</link>
+      <pubDate>Sun, 18 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/improved-gaming-powerline/</guid>
+      <description>Improving my gaming speed/latency with powerline internet.</description>
+    </item>
+    <item>
+      <title>Solving Slow Git Repos</title>
+      <link>http://localhost:1313/posts/fixing-slow-git/</link>
+      <pubDate>Sun, 11 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/fixing-slow-git/</guid>
+      <description>Experiments with fixing my slow github repo cloning/pulling with image resizing.</description>
+    </item>
+    <item>
+      <title>Kauai Hawaii - Part One: Adventures</title>
+      <link>http://localhost:1313/posts/kauai-hawaii-adventures/</link>
+      <pubDate>Sun, 04 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/kauai-hawaii-adventures/</guid>
+      <description>Our favorite adventures in Kauai, Hawaii.</description>
+    </item>
+    <item>
+      <title>Building Mega Desk</title>
+      <link>http://localhost:1313/posts/desk-build/</link>
+      <pubDate>Sun, 28 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/desk-build/</guid>
+      <description>The planning and execution of building my own mega desk.</description>
+    </item>
+    <item>
+      <title>Ice Fishing Trip 2024</title>
+      <link>http://localhost:1313/posts/icefishing/</link>
+      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/icefishing/</guid>
+      <description>An ice fishing adventure in Merrifield Minnesota</description>
+    </item>
+    <item>
+      <title>Supervision - First Impressions</title>
+      <link>http://localhost:1313/posts/supervision/</link>
+      <pubDate>Sun, 14 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/supervision/</guid>
+      <description>My first impressions while learning the supervision python package from Roboflow.</description>
+    </item>
+    <item>
+      <title>Why Write?</title>
+      <link>http://localhost:1313/posts/why-write/</link>
+      <pubDate>Sun, 07 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/why-write/</guid>
+      <description>My foray back into writing and what I hope to get out of it.</description>
+    </item>
+    <item>
+      <title>The Fundamentals - It&#39;s all Ones and Zeroes</title>
+      <link>http://localhost:1313/posts/fundamentals-blog-series/fundamentals-binary/</link>
+      <pubDate>Sun, 06 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/fundamentals-blog-series/fundamentals-binary/</guid>
+      <description>This post introduces the concepts of number systems, and character encodings</description>
+    </item>
+    <item>
+      <title>The Fundamentals - Introduction</title>
+      <link>http://localhost:1313/posts/fundamentals-blog-series/fundamentals-intro/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/fundamentals-blog-series/fundamentals-intro/</guid>
+      <description>This post introduces the fundamentals blog series.</description>
+    </item>
+  </channel>
+</rss>
