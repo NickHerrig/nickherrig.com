@@ -15,5 +15,12 @@
       <guid>http://localhost:1313/posts/streaming-requests/</guid>
       <description>Streaming ollama llm api request using Python.</description>
     </item>
+    <item>
+      <title>Training a Drink Classifier with Fastai</title>
+      <link>http://localhost:1313/posts/drink-classifier/</link>
+      <pubDate>Sun, 14 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/drink-classifier/</guid>
+      <description>Streaming ollama llm api request using Python.</description>
+    </item>
   </channel>
 </rss>

@@ -29,6 +29,9 @@
     <loc>http://localhost:1313/posts/streaming-requests/</loc>
     <lastmod>2024-04-14T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/posts/drink-classifier/</loc>
+    <lastmod>2024-04-14T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/posts/roboflow-databricks/</loc>
     <lastmod>2024-03-31T00:00:00+00:00</lastmod>
   </url><url>
