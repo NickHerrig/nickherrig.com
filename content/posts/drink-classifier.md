@@ -1,12 +1,12 @@
 ---
 author: ["Me"]
 title: "Training a Drink Classifier with Fastai"
-date: "2024-04-14"
+date: "2024-04-28"
 description: "Streaming ollama llm api request using Python."
 tags: [llm, python, api]
 ShowToc: true
 TocOpen: false
-draft: false
+draft: true 
 ---
 
 I recently started a new course called [Practical Deep Learning](https://course.fast.ai/). The course is taught by
