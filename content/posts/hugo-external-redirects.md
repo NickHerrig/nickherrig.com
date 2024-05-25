@@ -9,7 +9,7 @@ TocOpen: false
 draft: false
 ---
 
-Today I thought it would be a cool idea to link some of the blog posts I've written at work to my personal blog. The idea here is that I would have a hugo post that shows up in my archive, but when clicked, will redirect to where the post is hosted. Essentially, a simple external redirect. This proved to be a little more challenging with Hugo than I originally thought, hence the blog 🔥.
+Today I thought it would be a cool idea to link some of the blog posts I've written at work to my personal blog. The idea here is that I would have a Hugo post that shows up in my archive, but when clicked, will redirect to where the post is hosted. Essentially, a simple external redirect. This proved to be a little more challenging with Hugo than I originally thought, hence the blog 🔥.
 
 ## Hugo Aliases
 
@@ -19,9 +19,9 @@ Hugo does have a way to facilitate internal page redirects with [Aliases](https:
 
 External redirects require a little more advanced configuration. Huge shout out to a few resources including [Dan North's blog](https://dannorth.net/) for some hints on configuring this setup. Here's how it works.
 
-We'll use an internal hugo template called alias to customize the configuration. Some other embedded templates can be found [here](https://gohugo.io/templates/embedded/), but we'll use the [alias template](https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/alias.html). Some documentation around customizing URL management is tucked away [in the documentation](https://gohugo.io/content-management/urls/#customize) as well.
+We'll use an internal Hugo template called "alias" to customize the configuration. Some other embedded templates can be found [here](https://gohugo.io/templates/embedded/), but we'll use the [alias template](https://github.com/gohugoio/hugo/blob/master/tpl/tplimpl/embedded/templates/alias.html). Some documentation around customizing URL management is tucked away [in the documentation](https://gohugo.io/content-management/urls/#customize) as well.
 
-Let's take a look at the internal alias.html template below.
+Let's take a look at the internal "alias.html" template below:
 
 ```html
 <!DOCTYPE html>
@@ -36,15 +36,15 @@ Let's take a look at the internal alias.html template below.
 </html>
 ```
 
-Looking at the file, we can see there is a `Permalink` variable. We can set this variable in our page entry the following meta line will handle our redirect `<meta http-equiv="refresh" content="0; url={{ .Permalink }}">`. Let's do this. First, let's create a template at `layouts/external-redirect/single.html`.
+Looking at the file, we can see that there is a `Permalink` variable. We can set this variable in our page entry, and the following meta line will handle our redirect: `<meta http-equiv="refresh" content="0; url={{ .Permalink }}">`. Let's do this. First, let's create a template at `layouts/external-redirect/single.html`.
 
-In this file we'll replace the Permalink context with our own link. We can do this with the following snippet
+In this file we'll replace the `Permalink` context with our own link. We can do this with the following snippet:
 
 ```
 {{- template "_internal/alias.html" (dict "Permalink" .Params.url) -}}
 ```
 
-This will pull in the hugo alias embedded template and replace the Permalink context with a variable called url which we can pass in. Now, let's string up our redirect. Let's create a new post for one more my work blogs called "Making Megadesk Smart".
+This will pull in the Hugo "alias" embedded template and replace the Permalink context with a variable called "url" which we can pass in. Now, let's string up our redirect. Let's create a new post for one of my work blogs called "Making Megadesk Smart".
 
 ```
 ---

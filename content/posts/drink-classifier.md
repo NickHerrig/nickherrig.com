@@ -15,12 +15,12 @@ Let's get started 🍸🍹.
 
 ## What we're building
 
-The goal is to identify the most popular cocktails in images. We'll be focusing on the below 10 cocktails.
+The goal is to identify the most popular cocktails in images. We'll be focusing on the below 10 cocktails:
 
 1. Old Fashioned
 2. Margarita
 3. Mojito
-4. Pina Colada
+4. Piña Colada
 5. Manhattan
 6. Whiskey Sour
 7. Gin & Tonic
@@ -28,23 +28,23 @@ The goal is to identify the most popular cocktails in images. We'll be focusing 
 9. Cosmopolitan
 10. Daiquiri
 
-In order to accomplish this goal, we'll be fine tuning a [resnet18 model](https://en.wikipedia.org/wiki/Residual_neural_network) on images collected via the DuckDuckGo search engine. From there, we'll feed the model our images to see how it performs.
+In order to accomplish this goal, we'll be fine tuning a [ResNet18 model](https://en.wikipedia.org/wiki/Residual_neural_network) on images collected via the DuckDuckGo search engine. From there, we'll feed the model our images to see how it performs.
 
 ## Installing our Dependencies
 
-Before we get started let's pip install our python packages from fast.ai and DuckDuckGo.
+Before we get started let's pip install our Python packages from fast.ai and DuckDuckGo.
 
 ```shell
 pip install -U fastai duckduckgo_search
 ```
 
-Now that we have our packages installed let's collect our data.
+Now that we have our packages installed, let's collect our data.
 
 ## Retrieving the Data
 
 In order to train the model, we need some images of cocktails. Luckily, DuckDuckGo provides a nice way to do this.
-We'll use a python package called [duckduckgo_search](https://github.com/deedy5/duckduckgo_search) to accomplish fetching some images for training.
-Let's define a function that takes a search `term` and `max_images` and returns a list of image urls for download
+We'll use a Python package called [duckduckgo_search](https://github.com/deedy5/duckduckgo_search) to accomplish fetching some images for training.
+Let's define a function that takes a search `term` and `max_images` and returns a list of image URLs for download:
 
 ```python
 from duckduckgo_search import DDGS
@@ -56,12 +56,12 @@ def search_images(term, max_images=200):
 print(search_images("margarita", max_images=1))
 ```
 
-Running this script returns an [image of a margarita](https://downshiftology.com/wp-content/uploads/2019/05/Margarita-9.jpg)
+Running this script returns an [image of a margarita](https://downshiftology.com/wp-content/uploads/2019/05/Margarita-9.jpg).
 
 Let's now collect 100 images of each drink type for training.
 We'll also cleverly create drink directories so that we can use the parent directory name for training later.
 The last thing we'll do is use the fastai `verify_images` function to remove any images that weren't
-downloaded correctly.
+downloaded correctly:
 
 ```python
 from fastcore.all import *
@@ -83,13 +83,13 @@ for o in drinks:
     sleep(5)
     resize_images(path/o, max_size=400, dest=path/o)
 
-# Remove any failed downloads
+# Remove any failed downloads.
 failed = verify_images(get_image_files(path))
 failed.map(Path.unlink)
 print(len(failed))
 ```
 
-Awesome, at this point we've got a organized file structure of our drink data. Let's take a peak. 
+Awesome, at this point we've got an organized file structure of our drink data. Let's take a peek: 
 
 ```shell
 drinks
@@ -128,7 +128,7 @@ drinks
 ## Training the Model
 
 Now that we've got our images installed, let's get on with training our model.
-We'll use the fastai `DataBlock` object to create a slice of training and validation images.
+We'll use the fastai `DataBlock` object to create a slice of training and validation images:
 
 ```python
 from fastai.vision.all import *
@@ -145,16 +145,16 @@ dls = DataBlock(
 ).dataloaders(path)
 
 dls.show_batch(max_n=12)
-pyplot.show() # Note, this is only needed if running outside of a notebook
+pyplot.show() # Note, this is only needed if running outside of a notebook.
 ```
 
-Some important items to call out here are that we're using the `Image Block` and `CategoryBlock` to align
-our images with the `parent_label` of the directory, in other words aligning the drink picture with
+Some important items to call out here are that we're using the `ImageBlock` and `CategoryBlock` to align
+our images with the `parent_label` of the directory. In other words, we are aligning the drink picture with
 the correct drink type. Let's take a look at a few images in our training set.
 
 {{<figure src="/images/drink_classifier/drink-batch.png" title="drink batch" alt="drink batch">}}
 
-Pretty cool! Now, let's get to training! We'll use a `vision_learner` to fine tune a resnet18 model on 20 epochs of the data.
+Pretty cool! Now, let's get to training! We'll use a `vision_learner` to fine tune a ResNet18 model on 20 epochs of the data.
 It's interesting to see the train_loss decrease showing that our model is learning from the data. We'll save our model weights after training.
 
 ```python
@@ -194,19 +194,19 @@ epoch     train_loss  valid_loss  error_rate  time
 
 ## Run the Model
 
-Let's test our model out! Remember that Margarita we grabbed before?
+Let's test our model out! Remember that margarita we grabbed before?
 Well it wasn't in our training set so let's see how our model does!
 
 ```python
 from fastai.vision.all import *
 
-# Load the model weights
+# Load the model weights.
 learn = load_learner("model_weights.pth")
 
-# Classify the image
+# Classify the image.
 drink, test, probs = learn.predict(PILImage.create('test-drink.webp'))
 
-# Print the results
+# Print the results.
 print("the image is a", drink)
 print("All Drink Probabilities", probs)
 ```
@@ -217,10 +217,10 @@ All Drink Probabilities tensor([2.1035e-08, 1.2926e-07, 8.4791e-08, 8.0075e-12, 
         1.3793e-06, 1.8493e-08, 3.7605e-07, 1.3780e-06])
 ```
 
-I'd be lying if I told you I'm a fastai expert. What I will tell you though is that being able to train this model in
-a couple of seconds, and having a usable drink classifier for an application is pretty incredible.
+I'd be lying if I told you I'm a fastai expert. What I will tell you, though, is that being able to train this model in
+a couple of seconds and having a usable drink classifier for an application is pretty incredible.
 
-Software is eating the world ladies and gents, and models are eating software.
+Software is eating the world, ladies and gents, and models are eating software.
 
 Looking forward to blogging more about these concepts and my learning while continuing this class.
 

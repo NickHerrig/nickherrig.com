@@ -9,14 +9,14 @@ TocOpen: false
 draft: false
 ---
 
-It's been 2 days since the launch of Llama 3 and I've been itching to try it out. Here is a short blog post experimenting with ollama to locally run this sota(state of the art) llm(large language model). But first, what is llama3?
+It's been 2 days since the launch of Llama 3 and I've been itching to try it out. Here is a short blog post experimenting with Ollama to locally run this sota (state of the art) LLM (large language model). But first, what is Llama 3?
 
-## What is Llama3
-[Meta's Llama 3](https://ai.meta.com/blog/meta-llama-3/) is the most capable openly available LLM as of writing this blog. On April 18th 2024 Meta released two models of this generation, A 8B and 70B parameter model. Below are a few model performance charts on various LLM benchmarks. 
+## What is Llama 3
+[Meta's Llama 3](https://ai.meta.com/blog/meta-llama-3/) is the most capable openly available LLM as of writing this blog. On April 18th, 2024, Meta released two models of this generation with 8B and 70B parameters. Below are a few model performance charts on various LLM benchmarks. 
 
-{{<figure src="/images/llama3/llama3_performance.png" title="Llama3 Performance" alt="llama3 performance">}}
+{{<figure src="/images/llama3/llama3_performance.png" title="Llama 3 Performance" alt="llama 3 performance">}}
 
-One thing that stood out to me is that both the 8B and 70B sizes match or exceed similar class models. The exciting difference though, is that I can run the 70B parameter model locally on my laptop, while this isn't even an option for similar performing models like Google Gemini Pro 1.5, Claude 3 Sonnet, or Open AI's GPT-4. Meta also is actively training a larger 400B parameter model, which will likely out perform these two releases. Very exciting time to be alive!
+One thing that stood out to me is that both the 8B and 70B sizes match or exceed similar class models. The exciting difference, though, is that I can run the 70B parameter model locally on my laptop while this isn't even an option for similar performing models like Google Gemini Pro 1.5, Claude 3 Sonnet, or OpenAI's GPT-4. Meta also is actively training a larger 400B parameter model which will likely outperform these two releases. Very exciting time to be alive!
 
 🔥🔥🔥
 
@@ -24,11 +24,11 @@ Let's take a crack at getting this thing running locally. To do this let's use O
 
 ## What is Ollama
 
-Ollama is the easiest tooling I've discovered for getting LLMs up and running locally on any hardware. It can be installed on MacOS, Windows, and Linux by following instructions on their [github repo](https://github.com/ollama/ollama), which boasts an impressive 57k stars.
+Ollama is the easiest tooling I've discovered for getting LLMs up and running locally on any hardware. It can be installed on macOS, Windows, and Linux by following instructions on their [GitHub repo](https://github.com/ollama/ollama) which boasts an impressive 57k stars.
 
 ### Pulling the Models
 
-I'm currently working on a mac, and to download the 7B parameter llama3 model I run the following command.
+I'm currently working on a MacBook, and to download the 7B parameter Llama 3 model I run the following command:
 
 ```shell
 ollama pull llama3
@@ -49,7 +49,7 @@ Downloading the 70B parameter model takes a little longer since it's 40GB, a lit
 
 ## Chatting with the Model
 
-Now that we have the model weights installed locally let's chat with it. To run a chat session from the terminal we run `ollama run {model}`. Let's chat with the 70B parameter model!
+Now that we have the model weights installed locally, let's chat with it. To run a chat session from the terminal we run `ollama run {model}`. Let's chat with the 70B parameter model!
 
 ```shell
 ollama run llama3:70b
@@ -65,7 +65,7 @@ So, in total, there is only 1 other sister besides Sally. Therefore, Sally has e
 >>> Send a message (/? for help)
 ```
 
-Not bad! Note, that when asking this same question to Mistral 7B the model incorrectly answers 5.
+Not bad! Note that when asking this same question to Mistral 7B the model incorrectly answers 5.
 
 ```shell
 ollama run mistral
@@ -81,4 +81,4 @@ count as she was not included in the "brothers" count.
 >>> Send a message (/? for help)
 ```
 
-I don't know about you, but I'm looking forward to see how applications incorporate these powerful and accessible open source models into their business model. Ollama already boasts a impressive list of integrations that all have access to run these meta llama3 models. What will you build with Meta Llama 3? 🤔💡
+I don't know about you, but I'm looking forward to see how applications incorporate these powerful and accessible open source models into their business model. Ollama already boasts an impressive list of integrations that all have access to run these Meta Llama 3 models. What will you build with Meta Llama 3? 🤔💡
