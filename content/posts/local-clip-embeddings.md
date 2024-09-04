@@ -10,13 +10,13 @@ draft: false
 ---
 
 Recently I've been interested in some of the ways that we can use embeddings to compare images, text, and other data.
-Embeddings allow us to create features and applications like image search, retrieval augmented generation, and many more.
+Embeddings allow us to create features and applications like image search, [retrieval-augmented generation](https://en.wikipedia.org/wiki/Retrieval-augmented_generation), and many more.
 You can think of an embedding as just a list of numbers (a vector) that represents the semantic meaning of a given piece of data.
 this allows us to compare two embeddings and determine how similar they are.
 
-But how do we get embeddings?
+But how do we get these magical embeddings?
 
-## What is CLIP?
+## Enter CLIP
 
 There are many ways to generate embeddings for a dataset. One method is using models pre-trained on image and text data.
 Today, we'll use a model called [CLIP](https://openai.com/index/clip/) from OpenAI.
@@ -39,14 +39,14 @@ If you have a nvidia GPU at your disposal you can install the below package to l
 pip install onnxruntime-gpu
 ```
 
-If you're GPU poor though, no worries! You can simply install the default package and run inference on the CPU!
+If you're GPU poor, like me 🤣, no worries! You can simply install the default package and run inference on the CPU!
 
 Now that we have the library installed, let's take a look generating embeddings.
 
 ## Generating Embeddings
 
 First, let's import the library and setup our model.
-Just a heads up that the first time you run this code it took me about 50 seconds to download the model weights.
+Just a heads up that the first time I ran this code it took me about 50 seconds to download the model weights.
 
 ```python
 from inference.models import Clip
@@ -87,7 +87,7 @@ array([[ 2.66573608e-01, -2.61389434e-01,  8.80000144e-02,
 
 ### Image Embeddings
 Embeddings images is just as easy. We can use `image_embedding = clip.embed_image(image="bloody-mary.jpg")`
-i've got this delicous pictures of a bloody mary below.
+to generate embeddings for this delicious picture of a bloody mary below.
 
 ![bloody-mary](/images/local-clip-embeddings/bloody-mary.jpg)
 
@@ -110,9 +110,45 @@ Well, i'm glad you asked!
 
 ### Comparing Text and Image Embeddings
 
-Roboflow inference makes it very easy to compare text and images with 
+Roboflow inference makes it very easy to compare text and images with `clip.compare()`
+for example, we can compare the embedding "Hello World" to "globe", "cat", and "dog". 
 
+```python
+comparison =  clip.compare(
+        subject="hello world", 
+        subject_type="text", 
+        prompt=["globe", "cat", "dog"]
+)
+print(comparison)
+```
+
+```shell
+CLIP model loaded in 0.48 seconds
+[array([0.8489042], dtype=float32),  # similarity for "globe"
+ array([0.7678248], dtype=float32),  # similarity for "cat"
+ array([0.78415155], dtype=float32)] # similarity for "dog"
+```
+
+Notice how the word globe has the highest similarity? Likely because "globe" and "world" are similar in meaning.
+
+We can do the same thing with our image of a bloody mary! 
+
+```python
+comparison = clip.compare(
+        subject="bloody_mary.jpeg", 
+        prompt=["drink", "bloody mary", "man"]
+)
+print(comparison)
+```
+```shell
+CLIP model loaded in 0.43 seconds
+[array([0.2429935], dtype=float32),   # similarity for "drink"
+ array([0.30160928], dtype=float32),  # similarity for "bloody mary"
+ array([0.19586928], dtype=float32)]  # similarity for "man"
+```
+Yes, this image is more similar to a "bloody mary" than a "man"
+Pretty cool that we can use CLIP for zero shot classification tasks like this all locally on our own hardware!
 
 ## What's Next?
 
-I'm working of a few ideas to use embeddings through storing them in a vector database like [Weaviate](https://weaviate.io/) and then querying them with images.
+I'm exploring several ideas for utilizing embeddings by storing them in a vector database like [Weaviate](https://weaviate.io/) and then querying them with images. This approach could open up exciting possibilities for image-based search and retrieval. Until next time, happy building! 🥂
