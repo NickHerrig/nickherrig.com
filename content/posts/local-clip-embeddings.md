@@ -1,7 +1,7 @@
 ---
 author: ["Me"]
 title: "Local CLIP Embeddings"
-date: "2024-09-02"
+date: "2024-09-01"
 description: "Local CLIP Embeddings with Roboflow Inference"
 tags: [ml, python, embeddings]
 ShowToc: true
