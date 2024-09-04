@@ -9,10 +9,14 @@ menu:
       name: Archives
       url: archives
       weight: 10
+    - identifier: Search
+      name: Search
+      url: search
+      weight: 20
     - identifier: Resume
       name: Resume
       url: https://resume.nickherrig.com
-      weight: 20
+      weight: 30
 
 params:
   defaultTheme: auto
