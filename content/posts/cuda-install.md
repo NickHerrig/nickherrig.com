@@ -12,7 +12,7 @@ draft: false
 Last week I was running some computer vision inference benchmarks when I heard my machine's fans instantly fire up.
 It sounded like a rocket ship taking off, and it prompted me to take a peek at `htop` and view some details on my machine's processes.
 
-![htop results](/images/gpu_accelerated_inference/htop.webp)
+![htop results](/images/cuda_install/htop.webp)
 
 Huh, that's strange. Out of my 20 CPU cores, 14 of them were pegged at ~100% utilization, and when I killed my benchmark, they all shot
 back to ~0%. This was strange to me because this particular machine has an NVIDIA RTX 3070 Ti, and I thought the machine was configured to use it.
@@ -29,7 +29,7 @@ Command 'nvidia-smi' not found
 
 RIP 💀. I knew this day would come. It's time to embark on a journey of installing and configuring CUDA.
 
-![cuda meme](/images/gpu_accelerated_inference/learning_cuda.jpg)
+![cuda meme](/images/cuda_install/learning_cuda.jpg)
 
 ## Installing NVIDIA CUDA
 
@@ -100,7 +100,7 @@ I'm installing CUDA 12.4 release, but on each version, it has you select the fol
 The web page then provides you with either a package manager install or a runfile.
 I went ahead with the package manager to install the drivers and the toolkit.
 
-![installer](/images/gpu_accelerated_inference/cuda-installer.webp)
+![installer](/images/cuda_install/cuda-installer.webp)
 
 The installer first had me complete the toolkit install:
 
