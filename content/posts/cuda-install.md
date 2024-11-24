@@ -29,7 +29,7 @@ Command 'nvidia-smi' not found
 
 RIP 💀. I knew this day would come. It's time to embark on a journey of installing and configuring CUDA.
 
-![cuda meme](/images/cuda_install/learning_cuda.jpg)
+![cuda meme](/images/cuda_install/learning_cuda.webp)
 
 ## Installing NVIDIA CUDA
 
