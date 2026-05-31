@@ -24,7 +24,7 @@ params:
   profileMode:
     enabled: true # needs to be explicitly set
     title: Hey, I'm Nick! 👋
-    subtitle: "Engineering, go-to-market, and building systems that scale — with a focus on real-world computer vision deployments." 
+    subtitle: "Building systems that scale across engineering and go-to-market, focused on real-world computer vision deployments." 
     imageUrl: "https://avatars.githubusercontent.com/u/33797354?v=4"
     imageWidth: 220
     imageHeight: 220
@@ -38,7 +38,12 @@ params:
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
   ShowRssButtonInSectionTermList: true
-  
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/NickHerrig"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/nickherrig/"
 
 outputs:
   home:
