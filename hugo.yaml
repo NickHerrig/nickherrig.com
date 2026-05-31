@@ -20,6 +20,9 @@ menu:
 
 params:
   defaultTheme: auto
+  description: "Engineering, go-to-market, and real-world computer vision deployments."
+  images:
+    - "og-default.png"
   # profile-mode
   profileMode:
     enabled: true # needs to be explicitly set
