@@ -24,7 +24,7 @@ params:
   profileMode:
     enabled: true # needs to be explicitly set
     title: Hey, I'm Nick! 👋
-    subtitle: "" # TODO 
+    subtitle: "Engineering, go-to-market, and building systems that scale — with a focus on real-world computer vision deployments." 
     imageUrl: "https://avatars.githubusercontent.com/u/33797354?v=4"
     imageWidth: 220
     imageHeight: 220
