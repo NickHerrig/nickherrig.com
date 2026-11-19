@@ -1,0 +1,10 @@
+<article class="featured-project" aria-label="Featured project: {{ .title }}">
+  <div class="featured-project-art"><img src="{{ "images/split-the-g.svg" | relURL }}" alt="An illustration of a pint with a measurement line across the G, showing what the app scores." width="640" height="300"></div>
+  <div class="featured-project-copy">
+    <p class="featured-project-label">Featured project · Web app</p>
+    <h2><a href="{{ .url | relURL }}">{{ .title }}</a></h2>
+    <p>{{ .description }}</p>
+    <div class="featured-project-links"><a class="button" href="{{ .website }}">Try Split the G</a><a class="text-link" href="{{ .url | relURL }}">How we built it</a></div>
+    <a class="featured-project-domain" href="{{ .website }}">splittheg.dev</a>
+  </div>
+</article>

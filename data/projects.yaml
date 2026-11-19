@@ -1,0 +1,24 @@
+- title: Split the G
+  category: Computer vision / Web app
+  description: "An app I built with Hunter and Nathan to score a Guinness split, compare results, and find pubs."
+  url: /posts/building-split-the-g/
+  website: https://splittheg.dev/
+  featured: true
+  visual: split
+- title: Scribe for Obsidian
+  category: Local AI / Developer tools
+  description: "I built an Obsidian plugin that uses a local LLM to organize my meeting notes into a template."
+  url: /posts/ollama-obsidian/
+  visual: scribe
+- title: Cocktail classifier
+  category: Computer vision / Experiment
+  description: "Training an image classifier with fastai and deploying it with Gradio on Hugging Face."
+  url: /posts/deploy-drink-classifier/
+  visual: drinks
+- title: Mega Desk
+  category: Hardware / Weekend project
+  description: "Building an L-shaped standing desk with butcher block and a lift frame. The materials, planning, and assembly."
+  url: /posts/desk-build/
+  visual: desk
+  image: /images/desk/final.webp
+  alt: Nick’s completed L-shaped butcher-block standing desk.

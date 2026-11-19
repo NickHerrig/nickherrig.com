@@ -1,0 +1,9 @@
+Images from Nick Herrig and Hunter Diminick’s original Roboflow article:
+https://roboflow.com/blog/split-the-g-app
+
+pint-example.webp https://storage.ghost.io/c/2c/8d/2c8d8c0d-1c15-4b6d-825e-02b78d61d40a/content/images/size/w1000/format/webp/2025/02/Picture1.png
+meniscus.webp https://storage.ghost.io/c/2c/8d/2c8d8c0d-1c15-4b6d-825e-02b78d61d40a/content/images/size/w1000/format/webp/2025/02/Picture1-3.png
+g-detection.webp https://storage.ghost.io/c/2c/8d/2c8d8c0d-1c15-4b6d-825e-02b78d61d40a/content/images/size/w1000/format/webp/2025/02/Picture1-4.png
+workflow.webp https://storage.ghost.io/c/2c/8d/2c8d8c0d-1c15-4b6d-825e-02b78d61d40a/content/images/size/w1000/format/webp/2025/02/Picture1-8.png
+leaderboard.webp https://storage.ghost.io/c/2c/8d/2c8d8c0d-1c15-4b6d-825e-02b78d61d40a/content/images/size/w1000/format/webp/2025/02/Picture1-9.png
+score-result.webp https://storage.ghost.io/c/2c/8d/2c8d8c0d-1c15-4b6d-825e-02b78d61d40a/content/images/size/w1000/format/webp/2025/02/Picture1-10.png

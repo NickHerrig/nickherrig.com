@@ -1,41 +1,42 @@
 # Nickherrig.com
 
-This is the source code for my personal blog and website [nickherrig.com](https://nickherrig.com).
+Nick Herrig’s personal website: projects, writing, and an invitation to connect with founders and builders in St. Louis.
 
-## Installation
+## Local development
 
-### Clone The Repository
+The site uses **Hugo Extended 0.124.1**, matching the GitHub Actions build. Install that release from the [official Hugo releases](https://github.com/gohugoio/hugo/releases/tag/v0.124.1). Git LFS is required for the existing article images.
 
-`git clone git@github.com:NickHerrig/nickherrig.com.git`
-
-### Install Git LFS
-
-This repository deppends on git lfs for storing image data. Install git lfs by [visiting the documentation](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage) or running `brew install git-lfs` on a macbook.
-
-### Install Hugo
-
-This project relies on [Hugo](https://gohugo.io/) to build and serve the website.
-Follow the instructions on [how to install](https://gohugo.io/installation/) for your machine.
-
-I'll be using homebrew to install.
-
-```shell
-brew install hugo
+```sh
+git clone https://github.com/NickHerrig/nickherrig.com.git
+cd nickherrig.com
+git lfs install
+git lfs pull
+hugo server --bind 127.0.0.1 --port 1313 --baseURL http://localhost:1313/
 ```
 
-### Install the Hugo theme
+Open http://localhost:1313/. Add `-D -F` to include draft and future posts.
 
-This site utilizes the [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme. Installation instructions can be found in the github repo wiki. To install the hugo theme run the following command.
+## Editing
 
-```bash
-git submodule update --init --recursive
+- `content/posts/`: existing Markdown articles; their URLs are preserved.
+- `data/projects.yaml`: the curated project collection, used on Home and Work.
+- `content/about/index.md`: the personal introduction.
+- `layouts/index.html`: the homepage and selected writing.
+- `layouts/partials/connect.html`: the St. Louis collaboration invitation.
+- `assets/css/site.css`: the custom editorial design and responsive layouts.
+- `assets/js/site.js`: local article search and code-copy controls.
+- `static/images/cities.svg`: Chicago, Des Moines, and St. Louis illustration.
+- `static/images/split-the-g.svg`: featured project illustration.
+- `static/images/split-the-g/`: article images and source attribution.
+
+Templates are owned by this repository; no theme or JavaScript framework is required. The design uses system fonts and existing article assets. Search runs in the browser against Hugo’s generated JSON index. RSS subscriptions are available at `/posts/index.xml`. Contact links use LinkedIn and GitHub. No email list provider is connected.
+
+## Build and deployment
+
+```sh
+hugo --gc --minify
 ```
 
-### Run the application
+Pull requests build the site without deploying. Pushes to `master` or `main` build and deploy to GitHub Pages. Keep `HUGO_VERSION` in `.github/workflows/hugo.yaml` aligned with the local version when upgrading.
 
-Now that you have Hugo and the PaperMod theme installed, run Hugo.
-Notice how below I'm using the -D for draft posts and -F for future posts. This build both draft and posts with a future date into the locally served Hugo website.
-
-```shell
-Hugo serve -DF
-```
+Split the G leads the homepage and Work page, followed by Scribe, the cocktail classifier, and Mega Desk. The project illustrations are original vector or HTML artwork; the Split the G article includes images from the original Roboflow write-up.
