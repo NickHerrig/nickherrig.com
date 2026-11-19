@@ -1475,3 +1475,144 @@ em {
     grid-template-columns:1fr;
   }
 }
+
+/* Conference portrait and speaking feature. */
+.portrait-toggle {
+  position:relative;
+  display:block;
+  padding:0;
+  width:88px;
+  flex:0 0 88px;
+  border:0;
+  border-radius:6px;
+  overflow:hidden;
+  background:#121110;
+  cursor:pointer;
+}
+.portrait-toggle img {
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:1;
+}
+.portrait-control {
+  position:absolute;
+  right:0;
+  bottom:0;
+  padding:1px 7px;
+  color:#f7f4ed;
+  background:#121110e6;
+  font:11px/1.7 var(--sans);
+}
+.hero-byline {
+  display:flex;
+  gap:22px;
+  align-items:center;
+  margin-bottom:26px;
+}
+.hero .hero-byline .eyebrow {
+  margin:0;
+  line-height:1.8;
+}
+.about-heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:24px;
+}
+.about-heading .portrait-toggle {
+  width:124px;
+  flex-basis:124px;
+}
+.speaking-section {
+  padding-top:64px;
+  padding-bottom:64px;
+  border-bottom:1px solid var(--line);
+}
+.speaking-section .section-heading {
+  align-items:baseline;
+  margin-bottom:28px;
+}
+.speaking-event {
+  font-size:14px;
+  color:var(--muted);
+}
+.speaking-feature {
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:44px;
+  align-items:center;
+}
+.speaking-photo,.video-poster {
+  position:relative;
+  display:block;
+  color:var(--paper);
+  background:#121110;
+  overflow:hidden;
+  border-radius:4px;
+}
+.speaking-photo img,.prose .video-poster img {
+  display:block;
+  width:100%;
+  margin:0;
+  height:auto;
+}
+.photo-watch {
+  position:absolute;
+  bottom:16px;
+  left:16px;
+  padding:9px 14px;
+  background:var(--paper);
+  color:var(--ink);
+  border-radius:3px;
+  font:14px/1.5 var(--sans);
+}
+.speaking-copy .eyebrow {
+  margin-bottom:14px;
+}
+.speaking-copy h3 {
+  font-size:38px;
+  line-height:1.12;
+  margin-bottom:20px;
+  text-wrap:balance;
+}
+.speaking-copy>p:not(.eyebrow) {
+  font-size:16px;
+  line-height:1.75;
+  color:var(--muted);
+}
+.speaking-links {
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-top:24px;
+}
+.talk-player {
+  aspect-ratio:16/9;
+  background:#121110;
+  border-radius:4px;
+  overflow:hidden;
+  margin:30px 0;
+}
+.talk-player iframe {
+  display:block;
+  width:100%;
+  height:100%;
+  border:0;
+}
+@media(max-width:1000px) {
+  .speaking-feature { gap:28px; }
+  .speaking-copy h3 { font-size:32px; }
+  .about-heading .portrait-toggle { width:92px; flex-basis:92px; }
+}
+@media(max-width:760px) {
+  .hero-byline { gap:18px; margin-bottom:24px; }
+  .portrait-toggle { width:76px; flex-basis:76px; }
+  .speaking-section { padding-top:42px; padding-bottom:42px; }
+  .speaking-feature { grid-template-columns:1fr; gap:28px; }
+  .speaking-event { font-size:13px; }
+  .photo-watch { left:12px; bottom:12px; font-size:13px; padding:7px 10px; }
+  .about-heading { gap:16px; }
+  .about-heading .portrait-toggle { width:80px; flex-basis:80px; }
+}

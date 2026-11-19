@@ -28,6 +28,9 @@ Open http://localhost:1313/. Add `-D -F` to include draft and future posts.
 - `static/images/cities.svg`: Chicago, Des Moines, and St. Louis illustration.
 - `static/images/split-the-g.svg`: featured project illustration.
 - `static/images/split-the-g/`: article images and source attribution.
+- `layouts/partials/speaking.html`: the homepage VIS panel feature.
+- `content/posts/vis-2026.md`: panel notes and timestamped video links.
+- `static/images/vis-2026/`: conference photo, original animated portrait, and reduced-motion still.
 
 Templates are owned by this repository; no theme or JavaScript framework is required. The design uses system fonts and existing article assets. Search runs in the browser against Hugo’s generated JSON index. RSS subscriptions are available at `/posts/index.xml`. Contact links use LinkedIn and GitHub. No email list provider is connected.
 
