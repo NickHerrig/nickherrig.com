@@ -55,3 +55,37 @@ for (const pre of document.querySelectorAll('.prose pre')) {
   });
   pre.before(button);
 }
+
+// Show the original conference GIF, with a still image for reduced motion.
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+for (const button of document.querySelectorAll('[data-portrait]')) {
+  const portrait = button.querySelector('img');
+  const still = portrait.getAttribute('src');
+  const control = button.querySelector('.portrait-control');
+  function setPlaying(playing) {
+    portrait.src = playing ? portrait.dataset.animated : still;
+    button.setAttribute('aria-pressed', String(playing));
+    button.setAttribute('aria-label', playing ? 'Pause portrait animation' : 'Play portrait animation');
+    control.textContent = playing ? 'Pause' : 'Play';
+  }
+  setPlaying(!reducedMotion.matches);
+  button.addEventListener('click', () => setPlaying(button.getAttribute('aria-pressed') !== 'true'));
+  reducedMotion.addEventListener('change', event => { if (event.matches) setPlaying(false); });
+}
+
+// Keep the video poster local; load the YouTube player when someone chooses to watch.
+for (const link of document.querySelectorAll('[data-load-video]')) {
+  link.addEventListener('click', event => {
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    const player = link.closest('[data-video-id]');
+    const frame = document.createElement('iframe');
+    frame.src = `https://www.youtube-nocookie.com/embed/${player.dataset.videoId}?autoplay=1`;
+    frame.title = player.dataset.videoTitle;
+    frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+    frame.allowFullscreen = true;
+    frame.referrerPolicy = 'strict-origin-when-cross-origin';
+    player.replaceChildren(frame);
+    frame.focus();
+  });
+}

@@ -17,6 +17,10 @@ Outside of that, I like experimenting. I've built an [Obsidian plugin to clean u
 
 I use this site to share those projects and write about what I'm learning. The blog also has some travel posts and other things I've been interested in.
 
+## Speaking
+
+I moderated a robotics panel at Roboflow’s Visual Intelligence Summit with BOPA, Medra, and Standard Bots. We talked about deploying robots in farms, labs, and factories. [Watch the panel and read my notes](/posts/vis-2026/).
+
 ## St. Louis
 
 I'd like to meet more technical founders, engineers, and builders here. I'm interested in collaborating on projects and helping build a local community.
