@@ -61,12 +61,10 @@ const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 for (const button of document.querySelectorAll('[data-portrait]')) {
   const portrait = button.querySelector('img');
   const still = portrait.getAttribute('src');
-  const control = button.querySelector('.portrait-control');
   function setPlaying(playing) {
     portrait.src = playing ? portrait.dataset.animated : still;
     button.setAttribute('aria-pressed', String(playing));
     button.setAttribute('aria-label', playing ? 'Pause portrait animation' : 'Play portrait animation');
-    control.textContent = playing ? 'Pause' : 'Play';
   }
   setPlaying(!reducedMotion.matches);
   button.addEventListener('click', () => setPlaying(button.getAttribute('aria-pressed') !== 'true'));
