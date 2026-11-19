@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="300" viewBox="0 0 640 300">
+  <defs><clipPath id="glass"><path d="M233 35 Q220 75 239 130 L263 258 Q320 278 377 258 L401 130 Q420 75 407 35 Z"/></clipPath></defs>
+  <rect width="640" height="300" fill="#232a23"/>
+  <circle cx="320" cy="149" r="127" fill="#30392e"/>
+  <g clip-path="url(#glass)">
+    <path d="M225 30H415V265H225Z" fill="#59604e"/>
+    <path d="M225 112 Q320 126 415 112V264H225Z" fill="#e6ddc4"/>
+    <path d="M225 166 Q320 172 415 166V270H225Z" fill="#171c18"/>
+    <path d="M244 48Q235 84 252 133L273 248" fill="none" stroke="#fff8dd" stroke-opacity=".2" stroke-width="7"/>
+  </g>
+  <path d="M233 35 Q220 75 239 130 L263 258 Q320 278 377 258 L401 130 Q420 75 407 35 Z" fill="none" stroke="#aaa88c" stroke-width="2"/>
+  <ellipse cx="320" cy="35" rx="87" ry="12" fill="#323c30" stroke="#aaa88c" stroke-width="2"/>
+  <text x="320" y="204" text-anchor="middle" fill="#dcbf70" stroke="#171c18" stroke-width=".6" font-size="100" font-family="Georgia,serif">G</text>
+  <rect x="278" y="129" width="84" height="82" rx="3" fill="none" stroke="#dcbf70" stroke-width="1.5"/>
+  <path d="M160 170H480" stroke="#dcbf70" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <circle cx="160" cy="170" r="3" fill="#dcbf70"/><circle cx="480" cy="170" r="3" fill="#dcbf70"/>
+</svg>

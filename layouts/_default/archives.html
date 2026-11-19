@@ -1,0 +1,1 @@
+{{ define "main" }}<section class="wrap section"><h1>The <em>archive.</em></h1>{{ range (where site.RegularPages "Section" "posts").GroupByDate "2006" }}<h2 class="archive-year">{{ .Key }}</h2>{{ range .Pages }}{{ partial "post-row.html" . }}{{ end }}{{ end }}</section>{{ end }}

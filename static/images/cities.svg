@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="660" viewBox="0 0 520 660" fill="none">
+  <title>Chicago to Des Moines to St. Louis</title>
+  <desc>Three illustrated stops along Nick's path: Chicago's skyline, the Iowa State Capitol in Des Moines, and the Gateway Arch in St. Louis, connected by a winding line.</desc>
+  <defs>
+    <pattern id="grain" width="9" height="9" patternUnits="userSpaceOnUse"><circle cx="2" cy="3" r=".55" fill="#3c4234" opacity=".13"/><circle cx="7" cy="8" r=".4" fill="#3c4234" opacity=".1"/></pattern>
+    <clipPath id="frame"><rect width="520" height="660" rx="76"/></clipPath>
+  </defs>
+  <g clip-path="url(#frame)">
+    <path fill="#e9dfcd" d="M0 0h520v660H0z"/>
+    <path d="M0 206c140-31 264 30 520-9v237H0z" fill="#ddd0b8"/>
+    <path d="M0 425c130-35 340 25 520-11v246H0z" fill="#cbd0ba"/>
+    <!-- Chicago: stepped towers, lake, and a terracotta sun. -->
+    <circle cx="392" cy="103" r="47" fill="#bd6245"/>
+    <path d="M345 103h94m-47-47v94" stroke="#e9dfcd" stroke-opacity=".24"/>
+    <path d="M130 197v-46h26v-21h25v67h22v-79h27v79h23v-48h32v48h23v-64h35v64h25v-48h25v-24h19v72h32v-39h30v39h46v23H130z" fill="#a7ac98"/>
+    <path d="M223 199V94h16V68h28v20h17v38h17v73z" fill="#4e6253"/>
+    <path d="M245 68V44m16 24V48" stroke="#4e6253" stroke-width="3"/>
+    <path d="M354 199V115l8-25h30l8 25v84z" fill="#768571"/>
+    <path d="M366 90V71m21 19V71" stroke="#768571" stroke-width="2"/>
+    <path d="M245 102v76m15-76v76m16-43v43M368 118v59m17-59v59" stroke="#d9d7bf" stroke-width="2" opacity=".7"/>
+    <path d="M121 204c125-20 237 28 399-3v29c-151 24-270-16-399-8z" fill="#87998a"/>
+    <path d="M147 214c103-11 221 19 354-3" stroke="#f2eddd" stroke-width="1.5"/>
+    <!-- Des Moines: the Capitol's gold dome and the river. -->
+    <path d="M154 382v-38h34v-21h27v59h26v-42h22v42h135v-48h24v48h28v-30h32v30h38v35H154z" fill="#b4b49b"/>
+    <path d="M228 382v-45h39v-19h96v19h39v45z" fill="#eee6d5" stroke="#777c65" stroke-width="1.5"/>
+    <path d="M278 318v-15h74v15" fill="#ede3cc" stroke="#777c65" stroke-width="1.5"/>
+    <path d="M280 303c0-40 70-40 70 0z" fill="#bc9755"/>
+    <path d="M288 303c0-33 54-33 54 0m-27-31v31" stroke="#e2c78d" stroke-width="2"/>
+    <path d="M308 273v-13h14v13m-7-13v-10" stroke="#777c65" stroke-width="2"/>
+    <path d="M263 338l52-17 52 17z" fill="#d1c3a4" stroke="#777c65" stroke-width="1.5"/>
+    <path d="M280 345v32m17-32v32m18-32v32m18-32v32m17-32v32" stroke="#9c9f87" stroke-width="5"/>
+    <path d="M240 352h13m-13 12h13m123-12h13m-13 12h13" stroke="#9c9f87" stroke-width="4"/>
+    <path d="M212 382h208v7H212z" fill="#777c65"/>
+    <path d="M126 402c141-43 240 43 394-10v31c-160 37-237-35-394-7z" fill="#87998a"/>
+    <path d="M154 407c127-25 221 33 348-5" stroke="#f2eddd" stroke-width="1.5"/>
+    <!-- St. Louis: the Arch, skyline, and Mississippi. -->
+    <path d="M128 582v-33h30v-25h19v58h27v-46h32v46h32v-29h28v29h49v-40h28v40h34v-51h31v51h36v-28h46v64H128z" fill="#87977f"/>
+    <path d="M244 589c13-209 149-209 164 0h-19c-13-177-114-177-127 0z" fill="#f8f4e9"/>
+    <path d="M244 589c13-209 149-209 164 0m-146 0c13-177 114-177 127 0" stroke="#555d4d" stroke-width="1.5"/>
+    <path d="M253 589c13-195 132-195 145 0" stroke="#cbc6b5"/>
+    <path d="M0 594c112-27 171 25 278 3s162-39 242-20v83H0z" fill="#6d806f"/>
+    <path d="M0 632c117-59 224 42 355-7s166-20 192-19" stroke="#d7d7bf" stroke-width="18"/>
+    <path d="M0 633c117-59 224 42 355-7s166-20 192-19" stroke="#f2eddd" stroke-width="1.4"/>
+    <!-- The route reads from top to bottom. -->
+    <path d="M46 63c-31 77 32 122 0 203s32 133 0 204" stroke="#a4462c" stroke-width="1.7" stroke-dasharray="3 6" stroke-linecap="round"/>
+    <g fill="#a4462c" stroke="#f7f4ed" stroke-width="3"><circle cx="46" cy="63" r="6"/><circle cx="46" cy="266" r="6"/><circle cx="46" cy="470" r="6"/></g>
+    <g fill="#2c3029" font-family="Georgia, 'Times New Roman', serif" font-size="32" letter-spacing="-1">
+      <text x="69" y="73">Chicago</text>
+      <text x="69" y="276">Des Moines</text>
+      <text x="69" y="480">St. Louis</text>
+    </g>
+    <path d="M167 99l7-3 7 3m273 182l7-3 7 3m-17 208l7-3 7 3" stroke="#555d4d" stroke-width="1.5" stroke-linecap="round"/>
+    <path fill="url(#grain)" d="M0 0h520v660H0z"/>
+  </g>
+</svg>

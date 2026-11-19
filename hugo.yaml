@@ -1,55 +1,16 @@
 baseURL: https://nickherrig.com/
 title: Nick Herrig
 languageCode: en-us
-theme: PaperMod
-
-menu:
-  main:
-    - identifier: Archives
-      name: Archives
-      url: archives
-      weight: 10
-    - identifier: Search
-      name: Search
-      url: search
-      weight: 20
-    - identifier: Resume
-      name: Resume
-      url: https://resume.nickherrig.com
-      weight: 30
-
+enableRobotsTXT: true
+summaryLength: 24
 params:
-  defaultTheme: auto
-  description: "Engineering, go-to-market, and real-world computer vision deployments."
-  images:
-    - "og-default.png"
-  # profile-mode
-  profileMode:
-    enabled: true # needs to be explicitly set
-    title: Hey, I'm Nick! 👋
-    subtitle: "Building systems that scale across engineering and go-to-market, focused on real-world computer vision deployments." 
-    imageUrl: "https://avatars.githubusercontent.com/u/33797354?v=4"
-    imageWidth: 220
-    imageHeight: 220
-    imageTitle: nick_headshot
-    buttons:
-      - name: Writing
-        url: posts
-  ShowCodeCopyButtons: true
-  editPost:
-    URL: "https://github.com/NickHerrig/nickherrig.com/tree/master/content"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: true # to append file path to Edit link
-  ShowRssButtonInSectionTermList: true
-
-  socialIcons:
-    - name: github
-      url: "https://github.com/NickHerrig"
-    - name: linkedin
-      url: "https://www.linkedin.com/in/nickherrig/"
-
+  description: "Projects and writing by Nick Herrig. Interested in technology, startups, and meeting other builders in St. Louis."
+  images: [og-default.png]
+  linkedin: https://www.linkedin.com/in/nickherrig/
+  github: https://github.com/NickHerrig
 outputs:
-  home:
-    - HTML
-    - JSON # is necessary
-    - RSS
+  home: [HTML, RSS, JSON]
+markup:
+  highlight:
+    style: friendly
+    noClasses: false
