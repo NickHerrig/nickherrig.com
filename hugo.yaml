@@ -5,7 +5,6 @@ enableRobotsTXT: true
 summaryLength: 24
 params:
   description: "Projects and writing by Nick Herrig. Interested in technology, startups, and meeting other builders in St. Louis."
-  images: [og-default.png]
   linkedin: https://www.linkedin.com/in/nickherrig/
   github: https://github.com/NickHerrig
 outputs:
