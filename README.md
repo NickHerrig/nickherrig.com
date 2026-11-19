@@ -43,3 +43,14 @@ hugo --gc --minify
 Pull requests build the site without deploying. Pushes to `master` or `main` build and deploy to GitHub Pages. Keep `HUGO_VERSION` in `.github/workflows/hugo.yaml` aligned with the local version when upgrading.
 
 Split the G leads the homepage and Work page, followed by Scribe, the cocktail classifier, and Mega Desk. The project illustrations are original vector or HTML artwork; the Split the G article includes images from the original Roboflow write-up.
+
+## Social preview
+
+`assets/images/social-preview.svg` is the editable 1200 × 630 sharing card. Its PNG is used for Open Graph and Twitter cards, with a content hash in the public URL so image changes get a new URL. `static/og-default.png` is kept in sync for older links.
+
+To regenerate with ImageMagick (Georgia and Helvetica fonts required):
+
+```sh
+magick -background none assets/images/social-preview.svg -depth 8 -strip assets/images/social-preview.png
+cp assets/images/social-preview.png static/og-default.png
+```
